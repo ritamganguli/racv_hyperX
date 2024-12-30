@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CopyMap.xsd">
+	<!-- Start BAU Legacy Regression Objects -->
+	<screen screenId="resortsPage2">
+		<copy objectId="searchSuccess"><![CDATA[We've found results which match your search criteria. Check them out below!]]></copy>
+		<copy objectId="bookingUnavailableSearchSuccess"><![CDATA[Don’t miss out on RACV Resort experiences available on other dates. Click here to discover more]]></copy>
+		<copy objectId="bookingUnavailable"><![CDATA[Dates not available -]]></copy>
+	</screen>
+	<screen screenId="resortsContactUsThankUPage">
+		<copy objectId="pageTitle"><![CDATA[Contact RACV Resorts]]></copy>
+	</screen>
+	<screen screenId="burglaryStats">
+		<copy objectId="pageTitle"><![CDATA[Victorian burglary statistics]]></copy>
+		<copy objectId="burglaryRate"><![CDATA[Burglary rate for: 3024]]></copy>
+	</screen>
+	<screen screenId="roadsideAssistHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Emergency Roadside Assistance]]></copy>
+		<copy objectId="eraExtraCareProduct"><![CDATA[Extra Care]]></copy>
+		<copy objectId="expandCoverageText"><![CDATA[With Total Care, you can get service in any car you drive, as well as for the nominated vehicle. With Extra Care and Roadside Care, service is only for your nominated vehicle.]]></copy>
+		<copy objectId="expandUnlimitedServiceCallsText"><![CDATA[The number of times you can call out RACV for roadside assistance each subscription year.]]></copy>
+	</screen>
+	<screen screenId="publishedTestComponentPage">
+		<copy objectId="testButtonLink"><![CDATA[BUTTON-TEST]]></copy>
+	</screen>
+	<!-- End BAU Legacy Regression Objects -->
+	<screen screenId="racvHomePage">
+		<copy objectId="copyrightTextFooterLink"><![CDATA[© 2023 Royal Automobile Club of Victoria (RACV) All rights reserved.]]></copy>
+	</screen>
+	<screen screenId="searchResultsPage">
+		<copy objectId="searchTitleCompetition"><![CDATA[Showing results for Competitions]]></copy>
+		<copy objectId="searchTitleAccommodation"><![CDATA[Showing results for Accommodation]]></copy>
+		<copy objectId="searchTitleBuyingCar"><![CDATA[Showing results for Buying a car]]></copy>
+		<copy objectId="searchTitleCarHire"><![CDATA[Showing results for Car hire]]></copy>
+		<copy objectId="searchTitleInsurance"><![CDATA[Showing results for insurance]]></copy>
+	</screen>
+	<screen screenId="robotsTxt">
+		<copy objectId="robotsTxt"><![CDATA[User-agent: *
+Disallow: /]]></copy>
+	</screen>
+</class>

@@ -1,0 +1,34 @@
+{
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1600
+      ],
+      [
+        1199
+      ],
+      [
+        991
+      ],
+      [
+        375
+      ]
+    ]
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 15",
+      "Galaxy S24"
+    ],
+    "fullPage": true,
+    "orientation": "portrait"
+  },
+  "enableJavaScript": false,
+  "allowedHostnames": []
+}

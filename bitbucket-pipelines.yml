@@ -1,0 +1,31 @@
+image: maven:3.8.4
+
+pipelines:
+  pull-requests:
+    '**':
+      - parallel:
+          steps:
+            - step:
+                caches:
+                  - node
+                name: Gherkin Lint
+                image: node:20.5.1
+                script:
+                  - npm install -g gherkin-lint
+                  - git fetch origin $BITBUCKET_PR_DESTINATION_BRANCH
+                  - gitDiff=$(git diff --name-only origin/$BITBUCKET_PR_DESTINATION_BRANCH..$BITBUCKET_BRANCH)
+                  - echo "$gitDiff"
+                  - grepDiff=$(echo "$gitDiff" | grep '.feature$' || true)
+                  - echo "$grepDiff"
+                  - if [[ ! -z "$grepDiff" ]]; then echo "Running gherking-lint" && echo "$grepDiff" | xargs gherkin-lint -c gherkin-lintrc; else echo "No feature files to scan"; fi
+            - step:
+                caches:
+                  - maven
+                name: Checkstyle
+                script:
+                  - git fetch origin $BITBUCKET_PR_DESTINATION_BRANCH
+                  - gitDiff=$(git diff --name-only origin/$BITBUCKET_PR_DESTINATION_BRANCH..$BITBUCKET_BRANCH)
+                  - echo "$gitDiff"
+                  - grepDiff=$(echo "$gitDiff" | grep '.java$' || true)
+                  - echo "$grepDiff"
+                  - if [[ ! -z "$grepDiff" ]]; then echo "Running checkstyle" && mvn checkstyle:check; else echo "No java files to scan"; fi

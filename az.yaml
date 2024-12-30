@@ -1,0 +1,410 @@
+# This template contains the automation jobs
+
+jobs:
+- job: Automation
+  displayName: Automation
+  workspace:
+    clean: all
+  timeoutInMinutes: 200
+  cancelTimeoutInMinutes: 5
+  steps:
+  - checkout: automation-script
+    fetchDepth: 1
+  - task: Bash@3
+    displayName: Generate Config File
+    inputs:
+      targetType: 'inline'
+      script: |
+        echo "Generating Config file"
+        
+        #Check for ConfigTags pipeline variable
+        CONFIGTAGS="$(ConfigTags)"
+        if [ -z "$CONFIGTAGS" ]
+        then
+          echo "Pipeline ConfigTags variable cannot be empty." 1>&2
+        fi
+        
+        #Check for environment pipeline variable
+        if [ -z "$(environment)" ]
+        then
+          echo "Pipeline environment variable cannot be empty." 1>&2
+        fi
+
+        CONFIGFILE="$(Build.Repository.LocalPath)/src/test/resources/properties/config.properties"
+        if [ -e "$CONFIGFILE" ]; then
+          rm $CONFIGFILE
+        fi
+
+        touch $CONFIGFILE
+
+        echo "Injecting config values"
+        echo "URL=$(dispatcher.url)"
+        echo "PURL=$(dispatcher.purl)"
+        echo "AEM=$(aem.url)"
+        echo "AEMUSERNAME=****"
+        echo "AEMPASSWORD=****"
+        echo "DATAJSONPATH=$(datajsonpath)"
+        echo "OBJECTMAPPATH=$(objectmappath)"
+        echo "COPYTEXTMAPATH=$(copytextmappath)"
+        echo "DATAMAPPATH=$(datamappath)"
+        echo "REPORTPATH=$(reportpath)"
+        echo "IMAGEPATH=$(imagepath)"
+        echo "EXECUTIONPLATFORM=$(execution.platform)"
+        echo "LTUSERNAME=****"
+        echo "LTKEY=****"
+                
+        echo "URL=$(dispatcher.url)" >> $CONFIGFILE
+        echo "PURL=$(dispatcher.purl)" >> $CONFIGFILE
+        echo "AEM=$(aem.url)" >> $CONFIGFILE
+        echo "AEMUSERNAME=$(aem.username)" >> $CONFIGFILE
+        echo "AEMPASSWORD=$(aem.password)" >> $CONFIGFILE
+
+        echo "LTUSERNAME=$(lt.username)" >> $CONFIGFILE
+        echo "LTKEY=$(lt.key)" >> $CONFIGFILE
+
+        echo "DATAJSONPATH=$(datajsonpath)" >> $CONFIGFILE
+        echo "OBJECTMAPPATH=$(objectmappath)" >> $CONFIGFILE
+        echo "COPYTEXTMAPATH=$(copytextmappath)" >> $CONFIGFILE
+        echo "DATAMAPPATH=$(datamappath)" >> $CONFIGFILE
+        echo "REPORTPATH=$(reportpath)" >> $CONFIGFILE
+        echo "IMAGEPATH=$(imagepath)" >> $CONFIGFILE
+        echo "EXECUTIONPLATFORM=$(execution.platform)" >> $CONFIGFILE
+
+        echo "Injecting build number"
+        echo "BUILDNUMBER=1" >> $CONFIGFILE
+        echo "BUILDNUMBER=1"
+
+        echo "Build Number Injected"
+        
+        echo "Injecting tags"
+
+        TAGSPOSTFIX="$(tagPostFix)"
+
+        TAGSTRING="$CONFIGTAGS"
+        PRECHECKS="$(tagOverride)"
+
+        #Overwrite tags with PreChecks tags variable if it was passed through
+        if [ ! -z "$PRECHECKS" ]
+        then
+          echo "preCheckTags defined, injecting new tags"
+          TAGSTRING="$PRECHECKS"
+        else
+          echo "preCheckTags not defined"
+        fi
+        
+        echo "Appending tagPostFix to tags"
+        echo "Before - $TAGSTRING"
+        
+        #Append tagPostFix to each tag
+        NEWTAGSTRING=""
+        SPLITTAGS=$(echo $TAGSTRING | tr " " " ")
+        NUMELEMENTS=${#SPLITTAGS[@]}
+        for i in "${!SPLITTAGS[@]}"; do
+          if  [[ "${SPLITTAGS[$i]}" != "or" ]]; then
+            NEWTAGSTRING="$NEWTAGSTRING${SPLITTAGS[$i]}$TAGSPOSTFIX"
+          fi
+          if [[ "${SPLITTAGS[$i]}" != "or" ]] && (( $i < $NUMELEMENTS - 1)); then
+          echo "add or $i"
+            NEWTAGSTRING="$NEWTAGSTRING or "
+          fi
+        done
+        
+        echo "After - $NEWTAGSTRING"
+
+        #Inject tags into config file
+        echo "Injecting Tags"
+        sed -i '/TAGS/d' $CONFIGFILE
+        echo "TAGS=$NEWTAGSTRING" >> $CONFIGFILE
+        
+        #Set Max Parallel in testng-custom.xml
+        MAXPARALLEL="$(MaxParallel)"
+        if [ -n "$MAXPARALLEL" ]
+        then
+          echo "Setting max parallel"
+          sed -i "s/data-provider-thread-count=\"5\"/data-provider-thread-count=\"$MAXPARALLEL\"/g" $(Build.Repository.LocalPath)/testng-custom.xml
+          cat $(Build.Repository.LocalPath)/testng-custom.xml
+        fi
+      failOnStderr: true
+  - task: NodeTool@1
+    displayName: Install NodeTool
+    inputs:
+      version: '16.x'
+  - task: Npm@1
+    displayName: 'npm install'
+    inputs:
+      command: 'install'
+      verbose: true
+  - task: Bash@3
+    displayName: Maven script
+    inputs:
+      targetType: 'inline'
+      script: |
+        #Check execution platform is HYPEREXECUTE
+        today="$(date +'%A')"
+        echo "Today is ${today}"
+
+        if [ "$(execution.platform)" == "HYPEREXECUTE" ] ;
+        then
+
+          case "$(sampleType)" in 
+          "automation")
+          SAMPLE_TYPE="$(Build.Repository.LocalPath)/src/test/resources/hyperexecuteYamlFiles/automation";;
+          "smartui")
+          SAMPLE_TYPE="$(Build.Repository.LocalPath)/src/test/resources/hyperexecuteYamlFiles/smartui";;
+          *)
+          SAMPLE_TYPE="N/A"
+          esac
+
+          echo "Type is ${SAMPLE_TYPE}"
+
+          case "$(environment)" in
+          "pub1")
+          SAMPLE_ENV="$SAMPLE_TYPE/prod/bau";;
+          "pub2")
+          SAMPLE_ENV="$SAMPLE_TYPE/prod/bau";;
+          "prod-p3")
+          SAMPLE_ENV="$SAMPLE_TYPE/prod/p3";;
+          "prod-smartui")
+          SAMPLE_ENV="$SAMPLE_TYPE/prod";;
+          "dev1")
+          SAMPLE_ENV="$SAMPLE_TYPE/dev/bau";;
+          "dev1-p3")
+          SAMPLE_ENV="$SAMPLE_TYPE/dev/p3";;
+          "dev1-smartui")
+          SAMPLE_ENV="$SAMPLE_TYPE/dev";;
+          "hotfix")
+          SAMPLE_ENV="$SAMPLE_TYPE/hotfix/bau";;
+          "hotfix-p3")
+          SAMPLE_ENV="$SAMPLE_TYPE/hotfix/p3";;
+          "hotfix-smartui")
+          SAMPLE_ENV="$SAMPLE_TYPE/hotfix";;
+          "qa")
+          SAMPLE_ENV="$SAMPLE_TYPE/qa/bau";;
+          "qa-p3")
+          SAMPLE_ENV="$SAMPLE_TYPE/qa/p3";;
+          "qa-smartui")
+          SAMPLE_ENV="$SAMPLE_TYPE/qa";;
+          "sandbox")
+          SAMPLE_ENV="$SAMPLE_TYPE/sandbox/bau";;
+          "sandbox-p3")
+          SAMPLE_ENV="$SAMPLE_TYPE/sandbox/p3";;
+          "sandbox-smartui")
+          SAMPLE_ENV="$SAMPLE_TYPE/sandbox";;
+          "stage")
+          SAMPLE_ENV="$SAMPLE_TYPE/stage/bau";;
+          "stage-p3")
+          SAMPLE_ENV="$SAMPLE_TYPE/stage/p3";;
+          "stage-smartui")
+          SAMPLE_ENV="$SAMPLE_TYPE/stage";;
+          "utils")
+          SAMPLE_ENV="$SAMPLE_TYPE/utils";;
+          "storybook")
+          SAMPLE_ENV="$SAMPLE_TYPE/storybook";;
+          *)
+          SAMPLE_ENV="N/A"
+          esac
+
+          echo "Environment is ${SAMPLE_ENV}"
+
+          case "$(sampleName)" in
+          "buildNumber")
+          SAMPLE_LOCATION="$SAMPLE_ENV/buildNumber.yaml";;
+          "contentSync")
+          SAMPLE_LOCATION="$SAMPLE_ENV/contentSync.yaml";;
+          "authoringRegression1")
+          SAMPLE_LOCATION="$SAMPLE_ENV/authoringRegression1.yaml";;
+          "authoringRegression2")
+          SAMPLE_LOCATION="$SAMPLE_ENV/authoringRegression2.yaml";;
+          "authoringRegression3")
+          SAMPLE_LOCATION="$SAMPLE_ENV/authoringRegression3.yaml";;
+          "authoringRegression4")
+          SAMPLE_LOCATION="$SAMPLE_ENV/authoringRegression4.yaml";;
+          "authoringSanity")
+          SAMPLE_LOCATION="$SAMPLE_ENV/authoringSanity.yaml";;
+          "pre-Checks")
+          SAMPLE_LOCATION="$SAMPLE_ENV/preChecks.yaml";;
+          "websiteRegression")
+          SAMPLE_LOCATION="$SAMPLE_ENV/websiteRegression.yaml";;
+          "websiteRegression-android")
+          SAMPLE_LOCATION="$SAMPLE_ENV/websiteRegression-android.yaml";;
+          "websiteRegression-ios")
+          SAMPLE_LOCATION="$SAMPLE_ENV/websiteRegression-ios.yaml";;
+          "websiteRegression-safari")
+          SAMPLE_LOCATION="$SAMPLE_ENV/websiteRegression-safari.yaml";;
+          "prod-websiteSanity1")
+          SAMPLE_LOCATION="$SAMPLE_ENV/prod-websiteSanity1.yaml";;
+          "prod-websiteSanity2")
+          SAMPLE_LOCATION="$SAMPLE_ENV/prod-websiteSanity2.yaml";;
+          "p3-authoringClean")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-authoringClean.yaml";;
+          "p3-authoringRegression1")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-authoringRegression1.yaml";;
+          "p3-authoringSanity")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-authoringSanity.yaml";;
+          "p3-publishRegression")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-publishRegression.yaml";;
+          "p3-websiteRegression")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteRegression.yaml";;
+          "p3-websiteRegression-ios")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteRegression-ios.yaml";;
+          "p3-websiteRegression-remaining")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteRegression-remaining.yaml";;
+          "p3-websiteSanity")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteSanity.yaml";;
+          "p3-websiteSanity-bau")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteSanity-bau.yaml";;
+          "p3-websiteSanity-ios")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteSanity-ios.yaml";;
+          "p3-prod")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-prod.yaml";;
+          "p3-authoringRegression-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-authoringRegression-smartui.yaml";;
+          "p3-authoringSanity-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-authoringSanity-smartui.yaml";;
+          "p3-publishRegression-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-publishRegression-smartui.yaml";;
+          "p3-publishRegression-mobile-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-publishRegression-mobile-smartui.yaml";;
+          "p3-websiteRegression-remaining-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteRegression-remaining-smartui.yaml";;
+          "p3-websiteSanity-ios-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteSanity-ios-smartui.yaml";;
+          "p3-websiteSanity-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteSanity-smartui.yaml";;
+          "p3-websiteSanity-bau-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-websiteSanity-bau-smartui.yaml";;
+          "p3-prod-smartui")
+          SAMPLE_LOCATION="$SAMPLE_ENV/p3-prod-smartui.yaml";;
+          "storybookSmartui-base")
+          SAMPLE_LOCATION="$SAMPLE_ENV/storybookSmartui-base.yaml";;
+          "storybookSmartui-base-mobile")
+          SAMPLE_LOCATION="$SAMPLE_ENV/storybookSmartui-base-mobile.yaml";;
+          "storybookSmartui-club")
+          SAMPLE_LOCATION="$SAMPLE_ENV/storybookSmartui-club.yaml";;
+          "storybookSmartui-club-mobile")
+          SAMPLE_LOCATION="$SAMPLE_ENV/storybookSmartui-club-mobile.yaml";;
+          *)
+          SAMPLE_LOCATION="N/A"
+          esac  
+
+          echo "Location is ${SAMPLE_LOCATION}" 
+
+          echo "Execution platform is HYPEREXECUTE"
+          LTUSERNAME=$(lt.username)
+          LTKEY=$(lt.key)
+          
+          echo "Downloading HyperExecute..."
+          wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute -O hyperexecute
+
+          echo "Making HyperExecute executable..."
+          chmod u+x hyperexecute
+          
+          echo "Running HyperExecute..."
+          ./hyperexecute --user $LTUSERNAME --key $LTKEY --config $SAMPLE_LOCATION --download-report --download-artifacts --force-clean-artifacts
+
+          echo "Replacing reports and artifacts folders"
+          ls -ld $(Build.Repository.LocalPath)/reports/
+
+          mv -v "$(Build.Repository.LocalPath)/reports/"*"/extent-native-report.html" "$(Build.Repository.LocalPath)/src/test/resources/Reports/extentReportFile.html"
+          mv "$(Build.Repository.LocalPath)/artifacts/Cucumber-Reports/target" "$(Build.Repository.LocalPath)/target"
+          mv "$(Build.Repository.LocalPath)/artifacts/Junitreports/target" "$(Build.Repository.LocalPath)/target"
+          
+        else 
+          echo "Execution platform is JENKINS"
+          echo "Running Build"
+          mvn clean test -Dsurefire.suiteXmlFiles=testng-custom.xml
+        fi
+    continueOnError: true
+  - task: DeleteFiles@1
+    displayName: 'Remove config properties'
+    inputs:
+      SourceFolder: '$(Build.Repository.LocalPath)/src/test/resources/properties'
+      Contents: 'config.properties'
+    condition: succeededOrFailed()
+  - task: CopyFiles@2
+    inputs:
+      SourceFolder: '$(system.defaultworkingdirectory)'
+      Contents: '**'
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    condition: succeededOrFailed()
+  - task: NodeTool@0
+    displayName: Install NodeTool
+    inputs:
+      versionSpec: '12.x'
+  - task: PublishCucumberReport@1
+    inputs:
+      jsonDir: '$(build.artifactstagingdirectory)/target/cucumber-reports'
+      outputPath: '$(build.artifactstagingdirectory)/target'
+      theme: 'bootstrap'
+      name: $(Build.DefinitionName)_$(System.StageName)_$(Build.BuildNumber)
+      title: $(Build.DefinitionName)_$(System.StageName)_$(Build.BuildNumber)
+      reportSuiteAsScenarios: false
+  - task: PublishTestResults@2
+    enabled: true
+    displayName: 'Publish Test Results **/TEST-*.xml'
+    inputs:
+      searchFolder: '$(build.artifactstagingdirectory)/target/surefire-reports/junitreports'
+      #platform: $(System.StageName)
+      testRunTitle: $(System.StageName)
+      configuration: $(System.StageName)
+  - task: Bash@3
+    displayName: Test case failure detection script
+    name: CheckFailuresScript
+    inputs:
+      targetType: 'inline'
+      script: |
+        # This script checks for failures by looking in the aggregated cucumber.html.json file and sets task status and warning text
+        if grep -q '"status": "failed"' "$(build.artifactstagingdirectory)/target/cucumber.html.json"; then
+        echo "##vso[task.logissue type=warning]One or more test cases have failed."
+        echo "##vso[task.complete result=SucceededWithIssues;]"
+        #echo "##vso[task.complete result=Succeeded;]"
+        else
+        echo "All tests passed."
+        fi
+  - task: Bash@3
+    displayName: Rename extent report
+    inputs:
+      targetType: 'inline'
+      script: |
+        echo "Replacing file"
+        mv "$(Build.ArtifactStagingDirectory)/src/test/resources/Reports/extentReportFile.html" "$(Build.ArtifactStagingDirectory)/src/test/resources/Reports/$(Build.DefinitionName)_$(System.StageName)_$(Build.BuildNumber)_extentReportFile.html"
+        #mv "$(Build.ArtifactStagingDirectory)/src/test/resources/Reports" "$(Build.ArtifactStagingDirectory)/src/test/resources/Reports/$(Build.DefinitionName)_$(System.StageName)_$(Build.BuildNumber)_extentReportFile.html"
+        echo "File replaced"
+  - task: PublishBuildArtifacts@1
+    displayName: Publish Extent Report
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/src/test/resources/Reports/$(Build.DefinitionName)_$(System.StageName)_$(Build.BuildNumber)_extentReportFile.html'
+      ArtifactName: 'extentReport'
+      publishLocation: 'Container'
+    condition: succeededOrFailed()
+  - task: PublishBuildArtifacts@1
+    #Disabled for now as we dont really use any files from the drop other than for the logs
+    enabled: false
+    displayName: Publish Drop
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop-$(System.StageName)'
+      publishLocation: 'Container'
+    condition: succeededOrFailed()
+  - task: PublishBuildArtifacts@1
+    enabled: true
+    displayName: Publish Logs
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/src/test/resources/logs'
+      ArtifactName: '$(System.StageName)'
+      publishLocation: 'Container'
+    condition: succeededOrFailed()
+  - task: PublishBuildArtifacts@1
+    enabled: true
+    displayName: Publish JSON
+    inputs:
+      PathtoPublish: '$(build.artifactstagingdirectory)/target/cucumber.html.json'
+      ArtifactName: '$(System.StageName)'
+      publishLocation: 'Container'
+    condition: succeededOrFailed()
+  - task: Bash@3
+    displayName: Clean workspace
+    inputs:
+      targetType: 'inline'
+      script: 'sudo rm -vfr $(Agent.BuildDirectory)'
+    condition: succeededOrFailed()

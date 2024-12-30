@@ -1,0 +1,76 @@
+#!/bin/bash
+# Run gherkin-lint to lint feature files
+# Run checkstyle using java command to lint java files
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[1;34m'
+MAGENTA='\033[1;35m'
+NC='\033[0m' # No Color
+erroredFiles=0
+tempDir=$(mktemp -d)
+
+function get_abs_filename() {
+   #$1 : relative filename
+   echo "$(cd "$(dirname "$1")"; pwd -P)/$(basename "$1")/"
+}
+
+export PATH="$PATH:$(get_abs_filename "./node")"
+featureFiles=$(git diff --diff-filter=d --cached --name-only | grep -E '\.(feature)$'| wc -l | xargs)
+
+if [ $featureFiles -eq 0 ]
+then
+   printf "${GREEN}No feature files staged, skipping feature file lint${NC}\n"
+else
+	printf "Number of feature files staged and will be validated are : $featureFiles\n"
+
+	for file in $(git diff --diff-filter=d --cached --name-only | grep -E '\.(feature)$')
+	do
+	   ./node_modules/.bin/gherkin-lint -c gherkin-lintrc $file
+	   if [ $? -ne 0 ]
+	   then
+	      erroredFiles=$(($erroredFiles+1))
+	   fi
+	done
+	
+	if [ $erroredFiles -ne 0 ]
+	then
+	   printf "${RED}Commit REJECTED due to compliance in '$erroredFiles' feature files. Please correct them and commit again. Exiting.${NC}\n"
+	   exit 1
+	else
+	   printf "${GREEN}Feature file linting passed${NC}\n"
+	fi
+fi
+
+javaFiles=$(git diff --diff-filter=d --cached --name-only | grep -E '\.(java)$'| wc -l | xargs)
+
+if [ $javaFiles -eq 0 ]
+then
+   printf "${GREEN}No java files staged, skipping java file lint${NC}\n"
+else
+	# Validate java command
+	if [ ! command -v java &> /dev/null ]; then
+	    printf "${RED}java command not found, please install and configure java. Exiting.${NC}\n"
+	    exit 1
+	fi
+
+	java -jar checkstyle-10.12.3-all.jar -c ./google_checks.xml src/test/java 2>&1 | tee $tempDir/checkstyle-result.xml
+	
+	# If checkstyle-result.xml doesn't exist, exit with an error
+	if [ ! -e $tempDir/checkstyle-result.xml ]; then
+	   printf "${RED}File checkstyle-result.xml not found, please try again. Exiting.${NC}\n"
+	   exit 1
+	fi
+	
+	result=`grep "Caused by" $tempDir/checkstyle-result.xml | wc -l`
+	
+	# If checkstyle fails, exit with an error
+	if [ $result -ne 0 ]; then
+	   printf "${RED}Checkstyle failed due to violations. Please correct them and commit again. Exiting.${NC}\n"
+	   exit 1
+	fi
+	
+	# If Checkstyle passes, exit with success
+	printf "${GREEN}Checkstyle java linting passed${NC}\n"
+	exit 0
+fi

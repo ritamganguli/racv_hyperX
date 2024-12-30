@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ObjectMap.xsd">
+	<screen screenId="aemSitesPage">
+		<xpath objectId="aemEditorLoadingAnimation">//coral-wait</xpath>
+	</screen>
+	<!-- START - assistanceBySmsPage -->
+	<screen screenId="assistanceBySmsPage">
+		<xpath objectId="title">//div[@data-placeholder='Select your title']//div[@id='combo1']</xpath>
+		<xpath objectId="titleOption">//div[@data-value='Mr']</xpath>
+		<xpath objectId="firstName">//input[@name='First_Name__c']</xpath>
+		<xpath objectId="lastName">//input[@name='Last_Name__c']</xpath>
+		<xpath objectId="memberNumber">//*[@name="Member_Number__c"]</xpath>
+		<xpath objectId="address">//*[@name='Street_Name__c']</xpath>
+		<xpath objectId="suburb">//*[@name="City__c"]</xpath>
+		<xpath objectId="state">//div[contains(@data-placeholder,'Select your state')]//div[@id='combo1']</xpath>
+		<xpath objectId="stateValue">//div[@data-value='VIC']</xpath>
+		<xpath objectId="postcode">//*[@name="Postal_Code__c"]</xpath>
+		<xpath objectId="email">//*[@name="Email__c"]</xpath>
+		<xpath objectId="mobile">//*[@name="Mobile_Phone__c"]</xpath>
+		<xpath objectId="submitButton">//span[normalize-space()='Submit']</xpath>
+	</screen>
+	<!-- END - assistanceBySmsPage -->
+	<!-- START - bikeAssistEFormPage -->
+	<screen screenId="bikeAssistEFormPage">
+		<xpath objectId="firstName">//*[@id="firstnameId"]</xpath>
+		<xpath objectId="lastName">//*[@id="lastnameId"]</xpath>
+		<xpath objectId="dob">//*[@id="Date_of_Birth_Text__cId"]</xpath>
+		<xpath objectId="email">//*[@id="emailId"]</xpath>
+		<xpath objectId="contactNumber">//*[@id="mobileId"]</xpath>
+		<xpath objectId="streetAddress">//*[@id="streetId"]</xpath>
+		<xpath objectId="suburb">//*[@id="suburbId"]</xpath>
+		<xpath objectId="postcode">//*[@id="postalcodeId"]</xpath>
+		<xpath objectId="state">//*[@id="stateId"]</xpath>
+		<xpath objectId="partnerCode">//*[@id="Promo CodeId"]</xpath>
+		<xpath objectId="termsAndConditions">//*[@id="checkbox-wrap"]/label[contains(text(),'Purchaser')]</xpath>
+		<xpath objectId="marketingConsent">//*[@id="checkbox-wrap"]/label[contains(text(),'Keep me')]</xpath>
+		<xpath objectId="submitButton">//*[@class="submit section"]/div/div[2]/input[2]</xpath>
+	</screen>
+	<!-- END - bikeAssistEFormPage -->
+	<!-- START - clubFormPage1 -->
+	<screen screenId="clubFormPage1">
+		<xpath objectId="pageTitle">//*[@id="par_bookingwidget"]/h3</xpath>
+		<xpath objectId="checkInDatePicker">//*[@id="checkin-temp"]</xpath>
+		<xpath objectId="checkInDatePickerNxtMonth">//*[@class="datepicker-days"]/table/thead/tr[2]/th[3]</xpath>
+		<xpath objectId="checkInDatePickerDay5">(//*[@class="datepicker-days"]/table/tbody/tr/td[@class="day"])[5]</xpath>
+		<xpath objectId="checkOutDatePicker">//*[@id="checkout-temp"]</xpath>
+		<xpath objectId="checkOutDatePickerNxtMonth">//*[@class="datepicker-days"]/table/thead/tr[2]/th[3]</xpath>
+		<xpath objectId="checkOutDatePickerDay9">(//*[@class="datepicker-days"]/table/tbody/tr/td[@class="day"])[9]</xpath>
+		<xpath objectId="adults">//*[@id="adults"]</xpath>
+		<xpath objectId="children">//*[@id="children"]</xpath>
+		<xpath objectId="availibilityButton">//*[@id="check"]</xpath>
+		<xpath objectId="backToRacvMainLink">//*[@data-description="Back to RACV main site"]</xpath>
+	</screen>
+	<!-- END - clubFormPage1 -->
+	<!-- START - clubFormPage2 -->
+	<screen screenId="clubFormPage2">
+		<xpath objectId="pageTitle">//*[@class="u-spacing-bottom-small"]</xpath>
+		<xpath objectId="membershipNumber">//*[@id="input-name-2"]</xpath>
+		<xpath objectId="familyName">//*[@id="input-name-family"]</xpath>
+		<xpath objectId="submitButton">//button[@value="Submit"]</xpath>
+		<xpath objectId="memberValidationError">//p[text()="The club member number or family name were unable to be validated. Please try again."]</xpath>
+	</screen>
+	<!-- END - clubFormPage2 -->
+	<!-- START - clubFormPage3 -->
+	<screen screenId="clubFormPage3">
+		<xpath objectId="selectFirstRoom">//*[@id="room0"]</xpath>
+		<xpath objectId="addRoomCheckout">//*[@id="selectRoomBtn0"]</xpath>
+	</screen>
+	<!-- START - clubFormPage3 -->
+	<!-- START - clubLetterPage1 -->
+	<screen screenId="clubLetterPage1">
+		<xpath objectId="clubLetterheader">//*[@id="rte0.07296021760754312"]/div/h3</xpath>
+		<xpath objectId="membershipNumber">//*[@id="input-membership1"]</xpath>
+		<xpath objectId="memberTitle">//*[@id="titleId"]</xpath>
+		<xpath objectId="memberFirstName">//*[@id="input-name"]</xpath>
+		<xpath objectId="memberLastName">//*[@id="input-lastname"]</xpath>
+		<xpath objectId="visitStartCalendarIcon">//*[@title="start Of Visit"]</xpath>
+		<xpath objectId="visitStartCalendarNextMonth">//*[@class="datepicker-days"]/table/thead/tr[2]/th[3]</xpath>
+		<xpath objectId="visitStartCalendarDate">//*[@class="datepicker-days"]/table/tbody/tr/td[@class="day"]</xpath>
+		<xpath objectId="visitEndCalendarIcon">//*[@title="end Of Visit"]</xpath>
+		<xpath objectId="visitEndCalendarNextMonth">//*[@class="datepicker-days"]/table/thead/tr[2]/th[3]</xpath>
+		<xpath objectId="visitEndCalendarDate">(//*[@class="datepicker-days"]/table/tbody/tr/td[@class="day"])/following-sibling::node()</xpath>
+		<xpath objectId="visitStartTextBox">//*[@id="Event_Start_Time__c"]</xpath>
+		<xpath objectId="visitEndTextBox">//*[@id="Event_End_Time__c"]</xpath>
+		<xpath objectId="memberEmail">//*[@id="email"]</xpath>
+		<xpath objectId="phoneHome">//*[@id="home"]</xpath>
+		<xpath objectId="phoneMobile">//*[@id="mobile"]</xpath>
+		<xpath objectId="deliveryEmailMethod">//*[@id="deliveryTypeEmail to me"]</xpath>
+		<xpath objectId="declarationCheckbox">//*[@id="checkbox-label"]</xpath>
+		<xpath objectId="submit">//*[@id="submit2"]</xpath>
+		<xpath objectId="errorMessage">//*[text()[contains(., 'Please Enter Valid Club Membership Details')]]</xpath>
+	</screen>
+	<!-- END - clubLetterPage1 -->
+	<!-- START - contactRACVFormPage1 -->
+	<screen screenId="contactRACVFormPage1">
+		<xpath objectId="contactRACVFormPage1Message">//*[@id="personal-details"]/div[1]/h3</xpath>
+		<xpath objectId="membershipId">//input[@name="Member_Number__c"]</xpath>
+		<xpath objectId="firstName">//input[@name="First_Name__c"]</xpath>
+		<xpath objectId="lastName">//input[@name="Last_Name__c"]</xpath>
+		<xpath objectId="email">//input[@name="Email__c"]</xpath>
+		<xpath objectId="phoneNumber">//input[@name="Mobile_Phone__c"]</xpath>
+		<xpath objectId="natureOfBusinessDropDown">//div[@id="combo1"]</xpath>
+		<xpath objectId="natureOfBusinessFeedbackResult">//div[@role="option"][@data-value="Feedback"]</xpath>
+		<xpath objectId="comments">//textarea[@name="Comments__c"]</xpath>
+		<xpath objectId="submitButton">//button[@value="submit"]</xpath>
+		<xpath objectId="copyReferenceText">//button[@class="cmp-copyButton__container"]/span[contains(.,"FMD")]</xpath>
+		<xpath objectId="memberValidationError">//p[@class="cmp-form__error-notification__text"]/p[text()="Sorry, the member number you've entered is invalid. Please try again."]</xpath>
+	</screen>
+	<!-- END - contactRACVFormPage1 -->
+	<!-- START - contactRACVFormPage2 -->
+	<screen screenId="contactRACVFormPage2">
+		<xpath objectId="referenceNumber">//span[@class="referenceNumber"]</xpath>
+	</screen>
+	<!-- END - contactRACVFormPage2 -->
+	<!-- START - memberDiscountsHomePage -->
+	<screen screenId="memberDiscountsHomePage">
+		<xpath objectId="pageTitle">//*[@class="u-proxima-nova-xlarge "]</xpath>
+		<xpath objectId="popularTab">//ul[@class="cmp-benefitssnapshotpanel--tabList"]/li[@data-description="popular"]</xpath>
+		<xpath objectId="popularTabSelected">//ul[@class="cmp-benefitssnapshotpanel--tabList"]/li[contains(@class,"selected")][@data-description="popular"]</xpath>
+		<xpath objectId="popularDiscount1Picture">//div[@id="tab1"]/div/a[1]/div/picture</xpath>
+		<xpath objectId="popularDiscount10Picture">//div[@id="tab1"]/div/a[10]/div/picture</xpath>
+		<xpath objectId="shoppingTab">//ul[@class="cmp-benefitssnapshotpanel--tabList"]/li[@data-description="shopping"]</xpath>
+		<xpath objectId="shoppingTabSelected">//ul[@class="cmp-benefitssnapshotpanel--tabList"]/li[contains(@class,"selected")][@data-description="shopping"]</xpath>
+		<xpath objectId="shoppingDiscount1Picture">//div[@id="tab3"]/div/a[1]/div/picture</xpath>
+	</screen>
+	<!-- END - memberDiscountsHomePage -->
+	<screen screenId="movieTicketsPage2-p3">
+		<xpath objectId="membershipNumber">//input[@name="membershipNo"]</xpath>
+		<xpath objectId="memberFamilyName">//input[@name="lastname"]</xpath>
+		<xpath objectId="submitButton">//span[text()="Submit"]/..</xpath>
+		<xpath objectId="invalidMemberError">//p[text()[contains(., 'The member number or family name were unable to be validated. Please try again.')]]</xpath>
+	</screen>
+	<!-- START - racvHomePage -->
+	<screen screenId="racvHomePage">
+		<xpath objectId="closeEmergencyBanner">//button[contains(@class,'c-btn-close--emergency')]</xpath>
+		<xpath objectId="iWantToWidget">//*[@class="iwantto qlink"]</xpath>
+		<xpath objectId="myMembershipFooterLink">//*[@id="footer_footer_footerlinks"]/li[1]/a</xpath>
+		<xpath objectId="racvClubFooterLink">//*[@id="footer_footer_footerlinks"]/li[2]/a</xpath>
+		<xpath objectId="racvResortsFooterLink">//*[@id="footer_footer_footerlinks"]/li[3]/a</xpath>
+		<xpath objectId="racvShopsFooterLink">//*[@id="footer_footer_footerlinks"]/li[4]/a</xpath>
+		<xpath objectId="careersFooterLink">//*[@id="footer_footer_footerlinks"]/li[5]/a</xpath>
+		<xpath objectId="aboutRACVFooterLink">//*[@id="footer_footer_footerlinks"]/li[6]/a</xpath>
+		<xpath objectId="privacyCharterFooterLink">//*[@id="footer_footer_footerlinks"]/li[7]/a</xpath>
+		<xpath objectId="legalFooterLink">//*[@id="footer_footer_footerlinks"]/li[8]/a</xpath>
+		<xpath objectId="sitemapFooterLink">//*[@id="footer_footer_footerlinks"]/li[9]/a</xpath>
+		<xpath objectId="privacyCharterPDF">//*[@type="application/pdf"]</xpath>
+		<xpath objectId="facebookFooterLink">//*[@class="c-footer__bar-item"]/ul/li[1]</xpath>
+		<xpath objectId="twitterFooterLink">//*[@class="c-footer__bar-item"]/ul/li[2]</xpath>
+		<xpath objectId="linkedInFooterLink">//*[@class="c-footer__bar-item"]/ul/li[3]</xpath>
+		<xpath objectId="instagramFooterLink">//*[@class="c-footer__bar-item"]/ul/li[4]</xpath>
+		<xpath objectId="yooutubeFooterLink">//*[@class="c-footer__bar-item"]/ul/li[5]</xpath>
+		<xpath objectId="copyrightTextFooterLink">//*[@class="c-footer__bar-item"][2]/p</xpath>
+		<xpath objectId="genEnquiryFooterLink">//*[@data-description="General enquiries"]</xpath>
+		<xpath objectId="genEnquiryNumberFooterLink">//*[@data-description="General enquiries | 13 72 28"]</xpath>
+		<xpath objectId="roadsideAssistFooterLink">//*[@data-description="Roadside Assistance"]</xpath>
+		<xpath objectId="roadsideAssistNumFooterLink">//*[@data-description="Roadside Assistance | 13 11 11"]</xpath>
+		<xpath objectId="insuranceClaimFooterLink">//*[@data-description="Insurance Claims"]</xpath>
+		<xpath objectId="insuranceClaimNumFooterLink">//*[@data-description="Insurance Claims | 13 19 03"]</xpath>
+		<xpath objectId="insuranceClaimFooterButton">//*[@data-description="INSURANCE CLAIM"]</xpath>
+		<xpath objectId="closeYellowBannerButton">//*[@id="jcr:content_quicklinkbanner_quicklinksbanner"]/div/div[2]/div[2]/div/button/span</xpath>
+		<xpath objectId="racvLogo">//div[starts-with(@class, "c-logo-megamenu")]</xpath>
+		<xpath objectId="aboutRacvTopNav">//*[@class="c-nav-bar__item"][1]</xpath>
+		<xpath objectId="retailStoresTopNav">//*[@class="c-nav-bar__item"][2]</xpath>
+		<xpath objectId="fuelPricesTopNav">//*[@class="c-nav-bar__item"][3]</xpath>
+		<xpath objectId="helpSupportTopNav">//*[@class="c-nav-bar__item"][4]</xpath>
+		<xpath objectId="contactTopNav">//*[@class="c-nav-bar__item"][5]</xpath>
+		<xpath objectId="searchOnHomePage">//*[@aria-label="Search"]</xpath>
+		<xpath objectId="loginButtonHomePage">(//a[@data-description="log in"])[2]</xpath>
+		<xpath objectId="travelLeisureDeskMenuLink">//*[@data-link-title="Travel and leisure"]</xpath>
+		<xpath objectId="newsLifestyleDeskMenuLink"><![CDATA[//nav/ul/li/a[text()="News & lifestyle"]]]></xpath>
+		<xpath objectId="membershipDeskMenuLink">//*[@data-link-title="Membership"]</xpath>
+		<xpath objectId="carsAndTransportMenuLink">//*[@data-link-title="On the road"]</xpath>
+		<xpath objectId="businessSolutionsDeskMenuLink">//*[@data-link-title="Business solutions"]</xpath>
+		<xpath objectId="inYourHomeDeskMenuLink">//*[@data-link-title="In your home"]</xpath>
+		<xpath objectId="exploreRacvWebsiteFooterLink">//*[@class="c-footer-drawer__action"]</xpath>
+		<xpath objectId="gdprNotificationCloseButton">//div[contains(@class,"gdpr")]/descendant::button</xpath>
+		<xpath objectId="insuranceQuoteIWantToWidget">//*[@data-description="Get an insurance quote"]</xpath>
+		<xpath objectId="newsLifestyleHeading">//div[@id="canvas_canvas_par_rte"]/h1[text()="News and Lifestyle"]</xpath>
+	</screen>
+	<!-- END - racvHomePage -->
+	<!-- START - registerSocialMediaPage -->
+	<screen screenId="registerSocialMediaPage">
+		<xpath objectId="schoolName">//*[@id="Company__cId"]</xpath>
+		<xpath objectId="schoolAddress">//*[@id="addressId"]</xpath>
+		<xpath objectId="teacherName">//*[@id="firstnameId"]</xpath>
+		<xpath objectId="teacherEmail">//*[@id="emailId"]</xpath>
+		<xpath objectId="schoolPhone">//*[@id="phoneWorkId"]</xpath>
+		<xpath objectId="yearLevel">//*[@id="LevelId"]</xpath>
+		<xpath objectId="noOfStudents">//*[@id="Num_Of_People__cId"]</xpath>
+		<xpath objectId="comments">//*[@id="commentsId"]</xpath>
+		<xpath objectId="subscribeCheck">//*[@class="form_row subscribe-form"]/div[3]</xpath>
+		<xpath objectId="updatesCheck">//*[@class="form_row Narrow_marketing_consent__c-form"]/div[3]</xpath>
+		<xpath objectId="submitButton">//*[@class="submit section"]/div/div[2]/input[2]</xpath>
+	</screen>
+	<!-- END - registerSocialMediaPage -->
+	<!-- START - resortsContactUsOverlay -->
+	<screen screenId="resortsContactUsOverlay">
+		<xpath objectId="firstName">//*[@id="firstnameId"]</xpath>
+		<xpath objectId="lastName">//*[@id="lastnameId"]</xpath>
+		<xpath objectId="emailAddress">//*[@id="emailId"]</xpath>
+		<xpath objectId="mobileNumber">//*[@id="mobileId"]</xpath>
+		<xpath objectId="resortName">//*[@id="Location_Name__cId"]</xpath>
+		<xpath objectId="comments">//*[@id="commentsId"]</xpath>
+		<xpath objectId="submitButton">//*[@type="submit" and @name="Submit"]</xpath>
+	</screen>
+	<!-- END - resortsContactUsOverlay -->
+	<!-- START - resortsContactUsThankUPage -->
+	<screen screenId="resortsContactUsThankUPage">
+		<xpath objectId="pageTitle">//*[@class="u-proxima-nova-xlarge "]</xpath>
+	</screen>
+	<!-- END - resortsContactUsThankUPage -->
+	<!-- START - resortsPage1 -->
+	<screen screenId="resortsPage1">
+		<xpath objectId="pageTitle">//*[@class="c-hero__content-wrap     "]/h1</xpath>
+		<xpath objectId="resortsWhere">//label/h5[text()="Location"]/../../../div[2]/div</xpath>
+		<xpath objectId="resortsWhereVIC">//div[@id="react-select-2-listbox"]/descendant::p[text()="All Victoria"]/../..</xpath>
+		<xpath objectId="resortsWhereTAS">//div[@id="react-select-2-listbox"]/descendant::p[text()="Hobart Hotel"]/../..</xpath>
+		<xpath objectId="resortsWhereQLD">//div[@id="react-select-2-listbox"]/descendant::p[text()="All Queensland"]/../..</xpath>
+		<xpath objectId="resortsWhen">//input[@id='daterange-picker']</xpath>
+		<xpath objectId="resortsWhenStart">((//div[@class="react-datepicker__month"])[2]/div[3])/div[1]</xpath>
+		<xpath objectId="resortsWhenEnd1Night">((//div[@class="react-datepicker__month"])[2]/div[3])/div[2]</xpath>
+		<xpath objectId="resortsWhenEnd2Nights">((//div[@class="react-datepicker__month"])[2]/div[3])/div[3]</xpath>
+		<xpath objectId="resortsWhenEnd3Nights">((//div[@class="react-datepicker__month"])[2]/div[3])/div[4]</xpath>
+		<xpath objectId="apply">//div[@class="cmp-form-daterangepicker--calendar-wrapper"]/descendant::button/span[text()="Apply"]</xpath>
+		<xpath objectId="resortsWho">//div[@class='resorts-number-input__indicators css-1wy0on6']</xpath>
+		<xpath objectId="resortsWhoAddKid">//div[@id='react-select-3-option-1']//button[@aria-label='add']</xpath>
+		<xpath objectId="membershipType">//*[@class='member-dropdown__indicators css-1wy0on6']</xpath>
+		<xpath objectId="memTypeGuest">//div[@id='react-select-4-listbox']/div/div[4]</xpath>
+		<xpath objectId="memTypeRACVMember">//div[@id='react-select-4-listbox']/div/div[1]</xpath>
+		<xpath objectId="memTypeRACVMemberName">//*[@id="name"]</xpath>
+		<xpath objectId="memTypeRACVMemberEmail">//*[@id="email-id"]</xpath>
+		<xpath objectId="memTypeRACVMemberId">//*[@id="member-id"]</xpath>
+		<xpath objectId="memTypeRACVMemberSubmit">//*[@id="form-racv-member"]/div[3]/div/div/button</xpath>
+		<xpath objectId="memTypeRACVClubMember">//div[@id='react-select-4-listbox']/div/div[2]</xpath>
+		<xpath objectId="memTypeRACVClubMemberLastName">//input[@id='form-text-member_family_name']</xpath>
+		<xpath objectId="memTypeRACVClubMemberId">//input[@id='form-text-membership_number']</xpath>
+		<xpath objectId="memTypeRACVClubMemberSubmit">//div[@class='cmp-form-promo__btn-wrapper']/button[2]</xpath>
+		<xpath objectId="memTypeAutoClubMember">//div[@id='react-select-4-listbox']/div/div[3]</xpath>
+		<xpath objectId="memTypeAutoClubRACQMember">//div[contains(text(),'RACQ Member')]</xpath>
+		<xpath objectId="memTypeAutoClubRACQMemberName">//*[@id="name"]</xpath>
+		<xpath objectId="memTypeAutoClubRACQMemberEmail">//*[@id="email-id"]</xpath>
+		<xpath objectId="memTypeAutoClubRACQMemberSubmit">//*[@id="form-auto-club-member"]/section[2]/div/div/div[3]/div/div/button</xpath>
+		<xpath objectId="memTypeAutoClubOtherMember">//div[text()="Other Auto Club member"]</xpath>
+		<xpath objectId="searchButton">(//button[@data-location="resorts booking widget"][@data-description="search"])[2]</xpath>
+		<xpath objectId="backToRacvMainLink">//a[@data-description="Back to Travel &amp; Experiences"]</xpath>
+		<xpath objectId="contactButton">//*[@id="resorts-contact-drawer"]</xpath>
+		<xpath objectId="footerCopyrightText">//*[@class="c-footer__bar-item"][2]</xpath>
+		<xpath objectId="additionalHeaderVisible">//header[@class="c-header-secondary u-show@medium racv-header c-header-secondary--visible"]</xpath>
+		<xpath objectId="additionalHeaderLogo">//header[@class="c-header-secondary u-show@medium racv-header c-header-secondary--visible"]/div/ul/li/a</xpath>
+		<xpath objectId="additionalHeaderText">//header[@class="c-header-secondary u-show@medium racv-header c-header-secondary--visible"]/div/ul/li[2]/h2</xpath>
+		<xpath objectId="additionalHeaderContactButton">//*[@class="c-btn  c-btn--ghost-secondary  js-nav-drawer-control"]</xpath>
+		<xpath objectId="contactResortsOverlay">//*[@class="o-grid  o-grid--small  o-grid--pad@medium"]</xpath>
+		<xpath objectId="promoCodeLink">//div[@class="hide-small hide-medium"]/a[@data-description="add promo code"]</xpath>
+		<xpath objectId="promoCodeLinkMobile">//div[@class="only-mobile"]/a[@data-description="add promo code"]</xpath>
+		<xpath objectId="promoCodeField">//input[@name="firstName"]</xpath>
+		<xpath objectId="promoApplyButton">//div[@class="cmp-form-promo__btn-wrapper"]/button[@type="submit"]</xpath>
+		<xpath objectId="promoAppliedSuccess">//div[@class="hide-small hide-medium"]/descendant::span[text()="racvstaff17"]</xpath>
+		<xpath objectId="promoAppliedSuccessMobile">///div[@class="only-mobile"]/descendant::span[text()="racvstaff17"]</xpath>
+		<xpath objectId="tAndlSearchWidgetComp">//*[@id="par_productsearch"]</xpath>
+		<xpath objectId="facilitiesAtOurResortsLink">//*[@id="par_tiles_tile-2"]/a</xpath>
+		<xpath objectId="racvResortsInVicTitle">//*[@id="victoria"]/div/div/article/div/h2</xpath>
+		<xpath objectId="racvResortsInQLTitle">//*[@id="queensland"]/div/div/article/div/h2</xpath>
+		<xpath objectId="saveMoreTitle">//*[text()='Save more with RACV']</xpath>
+		<xpath objectId="attractionTicketIcon">//*[@aria-label='Ferris wheel icon']</xpath>
+		<xpath objectId="capeResortLink">//*[@data-location="RACV Cape Schanck Resort, Mornington Peninsula"]</xpath>
+		<xpath objectId="pinesResortLink">//*[@data-location="RACV Royal Pines Resort, Gold Coast"]</xpath>
+		<xpath objectId="hobartHotelLink">//*[@data-location="RACV Hobart Hotel"]</xpath>
+		<xpath objectId="resultCountsDiv">//div[@class="result-count"]</xpath>
+	</screen>
+	<!-- END - resortsPage1 -->
+	<!-- START - resortsPage2 -->
+	<screen screenId="resortsPage2">
+		<xpath objectId="searchSuccess">//*[@id="resorts-component-fbw"]/div/section[2]/section/div[1]/div[1]/p</xpath>
+		<xpath objectId="bookingUnavailableSearchSuccess">//*[@class="experience-value-selectdates"]/div</xpath>
+		<xpath objectId="bookingUnavailable">//*[@class="error-text"]/h4 /text()[contains(., 'Dates not available -')]</xpath>
+	</screen>
+	<!-- END - resortsPage2 -->
+	<!-- START - newsLifestyleDeskMenuOverlay -->
+	<screen screenId="newsLifestyleDeskMenuOverlay">
+		<xpath objectId="royalAutoMenuTitle">//*[@class="c-banner__title"]</xpath>
+		<xpath objectId="royalAutoButton">//*[@data-description="RoyalAuto"]</xpath>
+		<xpath objectId="newsLink">//*[@data-description="news"]</xpath>
+		<xpath objectId="communityLink">//*[@data-description="Living Well | Community"]</xpath>
+		<xpath objectId="homeLink">//*[@data-description="Living Well | Home"]</xpath>
+		<xpath objectId="victoriansLink">//*[@data-description="Living Well | Victorians"]</xpath>
+		<xpath objectId="sustainabilityLink">//*[@data-description="Living Well | Sustainability"]</xpath>
+		<xpath objectId="transportLink">//*[@data-description="transport"]</xpath>
+		<xpath objectId="victoriaLink">//*[@data-description="Travelling Well | Victoria"]</xpath>
+		<xpath objectId="australiaLink">//*[@data-description="Travelling Well | Australia"]</xpath>
+		<xpath objectId="theWorldLink">//*[@data-description="Travelling Well | The World"]</xpath>
+		<xpath objectId="travelTipsGuidesLink">//*[@data-description="Travelling Well | Travel tips &amp; guides"]</xpath>
+		<xpath objectId="lifestyleHomeLink">//*[@data-description="entertainment &amp; lifestyle"]</xpath>
+		<xpath objectId="carsLink">//*[@data-description="Moving Well | Cars"]</xpath>
+		<xpath objectId="cyclingLink">//*[@data-description="Moving Well | Cycling"]</xpath>
+		<xpath objectId="motorcyclingLink">//*[@data-description="Moving Well | Motorcycling"]</xpath>
+		<xpath objectId="publicTransportLink">//*[@data-description="Moving Well | Public Transport"]</xpath>
+		<xpath objectId="newsInformationLink">//*[@data-description="Moving Well | News &amp; Information"]</xpath>
+		<xpath objectId="propertyLink">//*[@data-description="property"]</xpath>
+		<xpath objectId="competitionsLink">//*[@data-description="Competitions and Events | Competitions"]</xpath>
+		<xpath objectId="EventsLink">//*[@data-description="Competitions and Events | Events"]</xpath>
+		<xpath objectId="travelLink">//*[@data-description="travel"]</xpath>
+		<xpath objectId="subscribeRoyalAutoLink">//*[@data-description="About RoyalAuto | Subscribe to RoyalAuto content"]</xpath>
+		<xpath objectId="advertiseWithUsLink">//*[@data-description="About RoyalAuto | Advertise with us"]</xpath>
+		<xpath objectId="lettersToEditorLink">//*[@data-description="About RoyalAuto | Letters to the Editor"]</xpath>
+		<xpath objectId="contactUsLink">//*[@data-description="About RoyalAuto | Contact us"]</xpath>
+		<xpath objectId="sustainabilityRaLink">//*[@data-description="sustainability"]</xpath>
+		<xpath objectId="susbscribeLink">//*[@data-description="subscribe to racv news"]</xpath>
+	</screen>
+	<!-- END - newsLifestyleDeskMenuOverlay -->
+		<!-- START - searchOverlay -->
+	<screen screenId="searchOverlay">
+		<xpath objectId="searchInputBox">//*[@id="search_box"]</xpath>
+		<xpath objectId="searchRacvButton">//div[@class="search-text-button"]/button</xpath>
+		<xpath objectId="suggestedSearchText">//li[@class="suggestedLinks"]</xpath>
+		<xpath objectId="competitionsLink">//*[@data-description="Competitions"]</xpath>
+		<xpath objectId="accommodationLink">//*[@data-description="Accommodation"]</xpath>
+		<xpath objectId="buyingACarLink">//*[@data-description="Buying a car"]</xpath>
+		<xpath objectId="carHireLink">//*[@data-description="Car hire"]</xpath>
+		<xpath objectId="searchSuggestInsurance">(//li[@data-group="suggestions"])[1]/a[text()="ance"]/mark[text()="insur"]</xpath>
+	</screen>
+	<!-- END - searchOverlay -->
+	<!-- START - searchResultsPage -->
+	<screen screenId="searchResultsPage">
+		<xpath objectId="searchTitleCompetition">//*[@data-showingresults="Showing results for "]</xpath>
+		<xpath objectId="searchTitleAccommodation">//*[@data-showingresults="Showing results for "]</xpath>
+		<xpath objectId="searchTitleBuyingCar">//*[@data-showingresults="Showing results for "]</xpath>
+		<xpath objectId="searchTitleCarHire">//*[@data-showingresults="Showing results for "]</xpath>
+		<xpath objectId="searchTitleInsurance">//*[@data-showingresults="Showing results for "]</xpath>
+		<xpath objectId="sortField">//*[@class="chosen-single"]/div</xpath>
+		<xpath objectId="sortDateOption">//*[@class="chosen-results"]/li[2]</xpath>
+		<xpath objectId="sortRelevanceCompetetion">//*[text()[contains(., 'Events &amp; Competitions - Royal Auto | RACV')]]</xpath>
+		<xpath objectId="sortDateCompetetion">//a[1]/article/h2[text()[contains(., 'Travel InsuranceCombined Financial')]]</xpath>
+		<xpath objectId="searchResultsTen">//*[text()[contains(., 'Showing 1 - 10')]]</xpath>
+		<xpath objectId="searchResultsTenthElement">//*[@class="js-search-result"]/a[10]/article/h2</xpath>
+		<xpath objectId="loadMoreLink">//*[@class="c-search-result__more"]/a</xpath>
+		<xpath objectId="searchResultsTwenty">//*[text()[contains(., 'Showing 1 - 20')]]</xpath>
+		<xpath objectId="searchResultsTwentiethElement">//*[@class="js-search-result"]/a[20]/article/h2</xpath>
+		<xpath objectId="searchResultsCompFirstEntry">//*[@class="js-search-result"]/a[1]/article/h2</xpath>
+	</screen>
+	<!-- END - searchResultsPage -->
+	<!-- START - tradesWidgetPage -->
+	<screen screenId="tradesWidgetPage">
+		<xpath objectId="postcodePlaceHolder">//div[@id="tradewidget"]/descendant::label[text()="Postcode or suburb"]/../descendant::div[text()="3000, Melbourne"]</xpath>
+		<xpath objectId="postcodeInput">//div[@id="tradewidget"]/descendant::label[text()="Postcode or suburb"]/../descendant::input[@class="cmp-tradewidget__input"]</xpath>
+		<xpath objectId="postcodeInputError">//div[@id="tradewidget"]/descendant::label[text()="Postcode or suburb"]/../ul/li[text()="This field is required"]</xpath>
+		<xpath objectId="postcodeFirstResult">//label[text()="Postcode or suburb"]/../descendant::div[contains(@class,"cmp-tradewidget__menu-list")]/div[1]</xpath>		
+		<xpath objectId="tradePlaceHolder">//div[@id="tradewidget"]/descendant::label[text()="Search by trade or job"]/../descendant::div[text()="e.g. Plumber or air conditioner"]</xpath>
+		<xpath objectId="tradeInput">//div[@id="tradewidget"]/descendant::label[text()="Search by trade or job"]/../descendant::input[@class="cmp-tradewidget__input"]</xpath>
+		<xpath objectId="tradeInputError">//div[@id="tradewidget"]/descendant::label[text()="Search by trade or job"]/../ul/li[text()="Please enter a trade or job"]</xpath>
+		<xpath objectId="tradeFirstResult">//label[text()="Search by trade or job"]/../descendant::div[contains(@class,"cmp-tradewidget__menu-list")]/div[1]</xpath>
+		<xpath objectId="allTradesElectricalResult">//label[text()="Search by trade or job"]/../descendant::div[contains(@class,"cmp-tradewidget__menu-list")]/descendant::div[text()="Electrical"]</xpath>
+		<xpath objectId="getQuoteButton">//div[@class="banner-button"]/descendant::button</xpath>
+	</screen>
+	<!-- END - tradesWidgetPage -->
+	<screen screenId="wooliesMemberValidation">
+		<xpath objectId="pageTitle">//span[contains(text(), 'Forgotten your number')]</xpath>
+		<xpath objectId="membershipNo">//input[@name="membershipNo"]</xpath>
+		<xpath objectId="firstName">//input[@name="firstname"]</xpath>
+		<xpath objectId="familyName">//input[@name="lastname"]</xpath>
+		<xpath objectId="emailAddress">//input[@name="email"]</xpath>
+		<xpath objectId="submitButton">//button[@type="submit"]</xpath>
+		<xpath objectId="memberValFailedMessage">//*[text()[contains(., 'The member number or family name were unable to be validated. Please try again.')]]</xpath>
+		<xpath objectId="wooliesRacvAnalytics">//div[contains(@data-user,"user.MemberName%22%3A%22RACV")]</xpath>
+	</screen>
+	<!-- START - bsgHomePage -->
+	<screen screenId="bsgHomePage">
+		<xpath objectId="bsgPageHeader">//*[@class="white"]</xpath>
+		<xpath objectId="bsgMenuLink">//a[contains(text(),'menu')]</xpath>
+		<xpath objectId="bsgFirstName">//*[@id="BSG_firstNameId"]</xpath>
+		<xpath objectId="bsglastName">//*[@id="BSG_lastNameId"]</xpath>
+		<xpath objectId="bsgEmail">//*[@id="BSG_emailId"]</xpath>
+		<xpath objectId="bsgPhone">//*[@id="BSG_phoneId"]</xpath>
+		<xpath objectId="offersCheckBox">//*[@id="checkbox-wrap"]</xpath>
+		<xpath objectId="privacyText">//*[@class="bsg-privacy"]</xpath>
+		<xpath objectId="subscribeButton">//*[@name="Submit-subscribe" and @type="submit"]</xpath>
+		<xpath objectId="subscribeThankYou">//*[@class="c-content-panel__title"]</xpath>
+		<xpath objectId="bsgContactFirstName">//*[@id="firstnameId"]</xpath>
+		<xpath objectId="bsgContactLastName">//*[@id="lastnameId"]</xpath>
+		<xpath objectId="bsgContactEmail">//*[@id="emailId"]</xpath>
+		<xpath objectId="bsgContactPhone">//*[@id="BSG_phoneId"]</xpath>
+		<xpath objectId="bsgContactEnquiryType">//*[@id="BSG_enquiryTypeId"]</xpath>
+		<xpath objectId="bsgContactEnquiryComments">//*[@id="BSG_commentsId"]</xpath>
+		<xpath objectId="bsgContactPrivacyText">//*[@id="gridcolumn_1200463700_1_rte_1042736577"]/p/sup/a</xpath>
+		<xpath objectId="bsgContactUsSubmitButton">//*[@name="submit-contactus" and @type="submit"]</xpath>
+	</screen>
+	<!-- END - bsgHomePage -->
+	<!-- START - smartplaceHomePage -->
+	<screen screenId="smartplaceHomePage">
+		<xpath objectId="logoImage">//*[@class="c-header__inner"]/div/div/a/i/span</xpath>
+		<xpath objectId="workingTogetherLink">//*[@id="header"]/li[1]/div/a</xpath>
+		<xpath objectId="workingDigitallyLink">//*[@id="header"]/li[2]/div/a</xpath>
+		<xpath objectId="473485BourkeLink">//*[@id="header"]/li[3]/div/a</xpath>
+		<xpath objectId="charliButton">//*[@data-description="CHARLi"]</xpath>
+		<xpath objectId="archiveTitleText">//*[@class="c-expand-panel__title"]</xpath>
+		<xpath objectId="discoverMoreButton">//*[@title="Discover More"]</xpath>
+		<xpath objectId="footerLinkContainer">//*[@class="c-footer-drawer__header"]</xpath>
+		<xpath objectId="footerBar">//*[@class="c-footer__bar-item"]/p</xpath>
+	</screen>
+	<!-- END - smartplaceHomePage -->
+	<screen screenId="memberDiscountsPage">
+		<xpath objectId="movieTicketsCardTab6">//*[@id="tab6"]/div[1]/a[@data-location="benefits snapshot panel | movie tickets"]</xpath>
+		<xpath objectId="benefitsHeading">//h2[@class="cmp-benefitssnapshotpanel--heading"]</xpath>
+		<xpath objectId="popularTab">//*[@class="cmp-benefitssnapshotpanel--tabList"]/li[ @data-description="popular"]</xpath>
+		<xpath objectId="popularTabFirstCard">//div[@id="tab1"]/div/a[1]</xpath>
+		<xpath objectId="fuelAndMotoringTab">//*[@class="cmp-benefitssnapshotpanel--tabList"]/li[ contains(@data-description,"fuel")]</xpath>
+		<xpath objectId="fuelAndMotoringTabFirstCard">//div[@id="tab2"]/div/a[1]</xpath>
+		<xpath objectId="viewAllButtonTab1">//div[@id="tab1" and contains(@class, "selected")]/div[2]/div/a[@class="cmp-button cmp-button--primary"]</xpath>
+		<xpath objectId="viewAllButtonTab2">//div[@id="tab2" and contains(@class, "selected")]/div[2]/div/a[@class="cmp-button cmp-button--primary"]</xpath>
+		<xpath objectId="viewAllButtonTab6">//div[@id="tab6" and contains(@class, "selected")]/div[2]/div/a[@class="cmp-button cmp-button--primary"]</xpath>
+		<xpath objectId="exploreAllText">//div[@class="cmp-benefitssnapshotpanel--tabcontentItem selected"]/descendant::h5[@class="viewAllOfferLink" and contains(text(),"Explore all")]</xpath>
+		<xpath objectId="textLink">//div[@class="cmp-benefitssnapshotpanel--tabcontentItem selected"]/descendant::a[@class="cmp-button cmp-button--primary" and @data-description="view all offers"]</xpath>
+		<xpath objectId="popularTabNinthCard">(//div[@id="tab1"]/div/a)[9]</xpath>
+		<xpath objectId="popularTabTenthCard">(//div[@id="tab1"]/div/a)[10]</xpath>
+		<xpath objectId="fuelAndMotoringTabNinthCard">(//div[@id="tab2"]/div/a)[9]</xpath>
+		<xpath objectId="fuelAndMotoringTabTenthCard">(//div[@id="tab2"]/div/a)[10]</xpath>
+	</screen>
+	<screen screenId="solarFormPage">
+		<xpath objectId="installOption">//span[text()="My home"]</xpath>
+		<xpath objectId="installBusinessOption">//span[text()="My business"]</xpath>
+		<xpath objectId="mainReason">//span[text()="Solar system package"]</xpath>
+		<xpath objectId="mainBuisnessReason">//span[text()="Solar"]</xpath>
+		<xpath objectId="productPackage">//span[text()="6.6kW system"]</xpath>
+		<xpath objectId="installEnquiry">//input[@name="enquiryReason"][@class="js-select-val"]</xpath>
+		<xpath objectId="didYouKnowSolarRebateYes">//input[@name="solarVictoriaHomeRebate"][@value="yes"]/..</xpath>
+		<xpath objectId="solarPanelsOptionCheckbox">//input[@name="products"][@value="Solar panels"]/..</xpath>
+		<xpath objectId="addressInput">//input[@name="propertyAddress"]</xpath>
+		<xpath objectId="suburbInput">//input[@name="propertySuburb"]</xpath>
+		<xpath objectId="stateDropdown">//legend[text()="State"]/../div/div/div[@id="combo1"]</xpath>
+		<xpath objectId="vicDropDownOption">//div[@data-value="VIC"]</xpath>
+		<xpath objectId="postcodeInput">//input[@name="propertyPostcode"]</xpath>
+		<xpath objectId="extraDetailsInput">//textarea[@name="extraDetails"]</xpath>
+		<xpath objectId="businessNameInput">//input[@name="businessName"]</xpath>
+		<xpath objectId="firstNameInput">//input[@name="firstName"]</xpath>
+		<xpath objectId="lastNameInput">//input[@name="lastName"]</xpath>
+		<xpath objectId="emailAddressInput">//input[@name="emailAddress"]</xpath>
+		<xpath objectId="phoneNumberInput">//input[@name="phoneNumber"]</xpath>
+		<xpath objectId="emailOption">//span[text()="Email"]</xpath>
+		<xpath objectId="howDidYouFindOutDropDown">//legend[text()="How did you hear about RACV Solar?"]/../descendant::div[@id="combo1"]</xpath>
+		<xpath objectId="howDidYouFindOutOtherOption">//legend[text()="How did you hear about RACV Solar?"]/../descendant::div[text()="Other"]</xpath>
+		<xpath objectId="promoCodeTextBox">//input[@name="promoCode"]</xpath>
+		<xpath objectId="yesRACVMember">//input[@name="isRacvMember"][@value="true"]</xpath>
+		<xpath objectId="subscribeCheckbox">//input[@name="subscribe"]</xpath>
+		<xpath objectId="submitButton">//button[@value="submit"]</xpath>
+	</screen>
+	<screen screenId="roadsideAssistHomePage">
+		<xpath objectId="card1Price">//div[normalize-space()='$11.67']</xpath>
+		<xpath objectId="card2Price">//div[normalize-space()='$19.00']</xpath>
+		<xpath objectId="card3Price">//div[normalize-space()='$25.92']</xpath>
+	</screen>
+	<screen screenId="clubContactUsPage">
+		<xpath objectId="firstName">//*[@id="firstnameId"]</xpath>
+		<xpath objectId="lastName">//*[@id="lastnameId"]</xpath>
+		<xpath objectId="email">//*[@id="emailId"]</xpath>
+		<xpath objectId="phoneNumber">//*[@id="mobileId"]</xpath>
+		<xpath objectId="clubMembershipNumber">//*[@id="membershipNoId"]</xpath>
+		<xpath objectId="enquiryType">//*[@id="Enquiry_type__cId"]</xpath>
+		<xpath objectId="comments">//*[@id="commentsId"]</xpath>
+		<xpath objectId="submitButton">//*[@class="submit section"]/div/div[2]/input[2]</xpath>
+		<xpath objectId="referenceNumber">//span[@class="referenceNumber"]</xpath>
+	</screen>
+	<screen screenId="thankYouPage">
+		<xpath objectId="referenceNumber">//span[@class="referenceNumber"]</xpath>
+	</screen>
+</class>

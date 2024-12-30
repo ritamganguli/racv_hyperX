@@ -1,0 +1,2 @@
+smartui.takeScreenshot", "args": [{"screenshotName": "Ignore-XPath", "fullPage": false, "ignoreDOM": {"xpath": ["/html/body/div[1]/div[1]/section[1]"]}}]}
+smartui.takeFullPageScreenshot, {"screenshotName\": \"Ritam_12\",\n \"smartScroll\": true,\n \"ignoreDOM\": {\"xpath\": [\"/html/body/div[1]/div[1]/section[1]\"]}\n }", "args": []

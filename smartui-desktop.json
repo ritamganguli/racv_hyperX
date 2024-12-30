@@ -1,0 +1,26 @@
+{
+  "web": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "viewports": [
+      [
+        1600
+      ],
+      [
+        1199
+      ],
+      [
+        991
+      ],
+      [
+        375
+      ]
+    ]
+  },
+  "enableJavaScript": false,
+  "allowedHostnames": []
+}

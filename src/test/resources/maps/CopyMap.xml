@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CopyMap.xsd">
+	<screen screenId="contactUsCityClub">
+		<copy objectId="contactUsMessage"><![CDATA[Or send us an enquiry with your contact details, and we will get back to you within 48 hours.]]></copy>
+	</screen>
+	<!-- START - clubLetterPage2 -->
+	<screen screenId="clubLetterPage2">
+		<copy objectId="successMessage"><![CDATA[Your request has been processed]]></copy>
+	</screen>
+	<!-- END - clubLetterPage2 -->
+	<!-- START - communityFoundationPage1 -->
+	<screen screenId="communityFoundationPage1">
+		<copy objectId="landingMessage"><![CDATA[RACV is committed to serving the community. That's why we created the RACV Community Foundation - to deliver vital funds to not-for-profit community groups.]]></copy>
+	</screen>
+	<!-- END - communityFoundationPage1 -->
+	<!-- START - contactRACVFormPage1 -->
+	<screen screenId="contactRACVFormPage1">
+		<copy objectId="contactRACVFormPage1Message"><![CDATA[Send us an enquiry with your details, and we will get back to you within 48 hours.]]></copy>
+	</screen>
+	<!-- END - contactRACVFormPage1 -->
+	<!-- START - golfSignUpPage1 -->
+	<screen screenId="golfSignUpPage1">
+		<copy objectId="golfSignUpMessage"><![CDATA[To purchase RACV Golf Membership, please complete the application form below and allow one business day for processing. Payment types accepted are VISA, Mastercard or PayPal. ]]></copy>
+		<copy objectId="memberValidationError"><![CDATA[Member number + Last name is not recognised]]></copy>
+	</screen>
+	<!-- END - golfSignUpPage1 -->
+	<!-- START - golfRenewPage1 -->
+	<screen screenId="golfRenewPage1">
+		<copy objectId="golfRenewalMessage"><![CDATA[Renew your Golf Membership]]></copy>
+		<copy objectId="invalidMembershipMessage"><![CDATA[Member number + Last name is not recognised.]]></copy>
+	</screen>
+	<!-- END - golfRenewPage1 -->
+	<!-- START - submitScorecardPage1 -->
+	<screen screenId="submitScorecardPage1">
+		<copy objectId="formHeader"><![CDATA[Submit a scorecard]]></copy>
+	</screen>
+	<!-- END - submitScorecardPage1 -->
+	<!-- START - submitScorecardPage2 -->
+	<screen screenId="submitScorecardPage2">
+		<copy objectId="formAcknowledgement"><![CDATA[Thank you for your scorecard.]]></copy>
+	</screen>
+	<!-- END - submitScorecardPage2 -->
+	<!-- START - racvCarSharePage1 -->
+	<screen screenId="racvCarSharePage1">
+		<copy objectId="pageTitle"><![CDATA[Sign up to RACV Car Share]]></copy>
+	</screen>
+	<!-- END - racvCarSharePage1 -->
+	<!-- START - racvCarSharePage2 -->
+	<screen screenId="racvCarSharePage2">
+		<copy objectId="imageValidationError"><![CDATA[We are unable to validate licence. Please provide the required information below.]]></copy>
+	</screen>
+	<!-- END - racvCarSharePage2 -->
+	<!-- START - racvCarShareThanksPage -->
+	<screen screenId="racvCarShareThanksPage">
+		<copy objectId="thanksMessage"><![CDATA[Thank you]]></copy>
+	</screen>
+	<!-- END - racvCarShareThanksPage -->
+	<!-- START - movieTicketsPage1 -->
+	<screen screenId="movieTicketsPage1">
+		<copy objectId="pageSubTitle"><![CDATA[RACV members get more at the movies]]></copy>
+	</screen>
+	<!-- END - movieTicketsPage1 -->
+	<!-- START - resortsPage1 -->
+	<screen screenId="resortsPage1">
+		<copy objectId="pageTitle"><![CDATA[Welcome to RACV Resorts]]></copy>
+	</screen>
+	<!-- END - resortsPage1 -->
+	<!-- START - resortsPage2 -->
+	<screen screenId="resortsPage2">
+		<copy objectId="searchSuccess"><![CDATA[We've found results which match your search criteria. Check them out below!]]></copy>
+		<copy objectId="bookingUnavailableSearchSuccess"><![CDATA[Don’t miss out on RACV Resort experiences available on other dates. Click here to discover more]]></copy>
+		<copy objectId="bookingUnavailable"><![CDATA[Dates not available -]]></copy>
+	</screen>
+	<!-- END - resortsPage2 -->
+	<!-- START - fuelPrices -->
+	<screen screenId="fuelPrices">
+		<copy objectId="pageTitle"><![CDATA[Fuel prices]]></copy>
+	</screen>
+	<!-- END - fuelPrices -->
+	<!-- START - burglaryStats -->
+	<screen screenId="burglaryStats">
+		<copy objectId="pageTitle"><![CDATA[Victorian burglary statistics]]></copy>
+		<copy objectId="burglaryRate"><![CDATA[Burglary rate for: 3024]]></copy>
+	</screen>
+	<!-- END - burglaryStats -->
+	<!-- START - clubFormPage1 -->
+	<screen screenId="clubFormPage1">
+		<copy objectId="pageTitle"><![CDATA[Book Now]]></copy>
+	</screen>
+	<!-- END - clubFormPage1 -->
+	<!-- START - clubFormPage5 -->
+	<screen screenId="clubFormPage5">
+		<copy objectId="confirmationMessage"><![CDATA[Your Reservation]]></copy>
+	</screen>
+	<!-- END - clubFormPage5 -->
+	<!-- START - myMembershipHomePage -->
+	<screen screenId="myMembershipHomePage">
+		<copy objectId="pageTitle"><![CDATA[Manage my membership]]></copy>
+	</screen>
+	<!-- END - myMembershipHomePage -->
+	<!-- START - racvShopsHomePage -->
+	<screen screenId="racvShopsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Find an RACV shop near you]]></copy>
+	</screen>
+	<!-- END - racvShopsHomePage -->
+	<!-- START - racvCareersHomePage -->
+	<screen screenId="racvCareersHomePage">
+		<copy objectId="pageTitle"><![CDATA[Work with RACV]]></copy>
+	</screen>
+	<!-- END - racvCareersHomePage -->
+	<!-- START - aboutRACVHomePage -->
+	<screen screenId="aboutRACVHomePage">
+		<copy objectId="pageTitle"><![CDATA[About RACV]]></copy>
+	</screen>
+	<!-- END - aboutRACVHomePage -->
+	<!-- START - legalHomePage -->
+	<screen screenId="legalHomePage">
+		<copy objectId="pageTitle"><![CDATA[Privacy & Legal]]></copy>
+	</screen>
+	<!-- END - legalHomePage -->
+	<!-- START - sitemapHomePage -->
+	<screen screenId="sitemapHomePage">
+		<copy objectId="pageTitle"><![CDATA[Sitemap]]></copy>
+	</screen>
+	<!-- END - sitemapHomePage -->
+	<!-- START - racvHomePage -->
+	<screen screenId="racvHomePage">
+		<copy objectId="copyrightTextFooterLink"><![CDATA[© 2023 Royal Automobile Club of Victoria (RACV) All rights reserved.]]></copy>
+	</screen>
+	<!-- END - racvHomePage -->
+	<!-- START - contactUsPage -->
+	<screen screenId="contactUsPage">
+		<copy objectId="pageTitle"><![CDATA[Contact RACV]]></copy>
+	</screen>
+	<!-- END - contactUsPage -->
+	<!-- START - roadsideAssistHomePage -->
+	<screen screenId="roadsideAssistHomePage">
+		<copy objectId="pageTitle">RACV Emergency Roadside Assistance</copy>
+		<copy objectId="eraExtraCareProduct"><![CDATA[Extra Care]]></copy>
+		<copy objectId="expandCoverageText"><![CDATA[With Total Care, you can get service in any car you drive, as well as for the nominated vehicle. With Extra Care and Roadside Care, service is only for your nominated vehicle.]]></copy>
+		<copy objectId="expandMetroTowText"><![CDATA[You’ll be towed in your chosen direction up to the relevant kilometre limit. Kilometres travelled beyond that limit aren’t included and you’ll need to cover the payment.]]></copy>
+		<copy objectId="expandUnlimitedServiceCallsText"><![CDATA[The number of times you can call out RACV for roadside assistance each subscription year.]]></copy>
+	</screen>
+	<!-- END - roadsideAssistHomePage -->
+	<!-- START - insuranceClaimHomePage -->
+	<screen screenId="insuranceClaimHomePage">
+		<copy objectId="pageTitle"><![CDATA[Insurance claims]]></copy>
+	</screen>
+	<!-- END - insuranceClaimHomePage -->
+	<!-- START - makePaymentPage -->
+	<screen screenId="makePaymentPage">
+		<copy objectId="pageTitle"><![CDATA[Make a payment]]></copy>
+	</screen>
+	<!-- END - makePaymentPage -->
+	<!-- START - searchOverlay -->
+	<screen screenId="searchOverlay">
+		<copy objectId="suggestedSearchText"><![CDATA[Suggested search]]></copy>
+	</screen>
+	<!-- END - searchOverlay -->
+	<!-- START - searchResultsPage -->
+	<screen screenId="searchResultsPage">
+		<copy objectId="searchTitleCompetition"><![CDATA[Showing results for Competitions]]></copy>
+		<copy objectId="searchTitleAccommodation"><![CDATA[Showing results for Accommodation]]></copy>
+		<copy objectId="searchTitleBuyingCar"><![CDATA[Showing results for Buying a car]]></copy>
+		<copy objectId="searchTitleCarHire"><![CDATA[Showing results for Car hire]]></copy>
+		<copy objectId="searchTitleInsurance"><![CDATA[Showing results for insurance]]></copy>
+	</screen>
+	<!-- END - searchResultsPage -->
+	<!-- START - businessInsurancePage -->
+	<screen screenId="businessInsurancePage">
+		<copy objectId="pageTitle"><![CDATA[Business insurance]]></copy>
+	</screen>
+	<!-- END - businessInsurancePage -->
+	<!-- START - myMembershipLoginPage -->
+	<screen screenId="myMembershipLoginPage">
+		<copy objectId="pageTitle"><![CDATA[Login to My Membership Online]]></copy>
+	</screen>
+	<!-- END - myMembershipLoginPage -->
+	<!-- START - ourDestinationsHomePage -->
+	<screen screenId="ourDestinationsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Our destinations]]></copy>
+	</screen>
+	<!-- END - ourDestinationsHomePage -->
+	<!-- START - confAndEventsHomePage -->
+	<screen screenId="confAndEventsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Conferences and events at RACV Club and Resorts]]></copy>
+	</screen>
+	<!-- END - confAndEventsHomePage -->
+	<!-- START - weddingsHomePage -->
+	<screen screenId="weddingsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Weddings]]></copy>
+	</screen>
+	<!-- END - weddingsHomePage -->
+	<!-- START - offerPromotionsHomePage -->
+	<screen screenId="offerPromotionsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Offers and Promotions]]></copy>
+	</screen>
+	<!-- END - offerPromotionsHomePage -->
+	<!-- START - oneSpaHomePage -->
+	<screen screenId="oneSpaHomePage">
+		<copy objectId="pageTitle"><![CDATA[One Spa]]></copy>
+	</screen>
+	<!-- END - oneSpaHomePage -->
+	<!-- START - healesvilleHomePage -->
+	<screen screenId="healesvilleHomePage">
+		<copy objectId="pageTitle"><![CDATA[Healesville Country Club]]></copy>
+	</screen>
+	<!-- END - healesvilleHomePage -->
+	<!-- START - whatsOnHomePage -->
+	<screen screenId="whatsOnHomePage">
+		<copy objectId="pageTitle"><![CDATA[What's On at RACV Club]]></copy>
+	</screen>
+	<!-- END - healesvilleHomePage -->
+	<!-- START - racvClubHomePage -->
+	<screen screenId="racvClubHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Club]]></copy>
+	</screen>
+	<!-- END - racvClubHomePage -->
+	<!-- START - cityClubHomePage -->
+	<screen screenId="cityClubHomePage">
+		<copy objectId="pageTitle"><![CDATA[City Club]]></copy>
+	</screen>
+	<!-- END - cityClubHomePage -->
+	<!-- START - clubConfEventHomePage -->
+	<screen screenId="clubConfEventHomePage">
+		<copy objectId="pageTitle"><![CDATA[Conferences and Events at RACV Clubs]]></copy>
+	</screen>
+	<!-- END - clubConfEventHomePage -->
+	<!-- START - clubMembershipHomePage -->
+	<screen screenId="clubMembershipHomePage">
+		<copy objectId="pageTitle"><![CDATA[Membership]]></copy>
+	</screen>
+	<!-- END - clubMembershipHomePage -->
+	<!-- START - insuranceTandLHomePage -->
+	<screen screenId="insuranceTandLHomePage">
+		<copy objectId="pageTitle"><![CDATA[Insurance for travel and leisure]]></copy>
+	</screen>
+	<!-- END - insuranceTandLHomePage -->
+	<!-- START - travelInsuranceHomePage -->
+	<screen screenId="travelInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[Travel Insurance]]></copy>
+	</screen>
+	<!-- END - travelInsuranceHomePage -->
+	<!-- START - caravanTrailerInsuranceHomePage -->
+	<screen screenId="caravanTrailerInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Caravan & Trailer Insurance]]></copy>
+	</screen>
+	<!-- END - caravanTrailerInsuranceHomePage -->
+	<!-- START - marineBoatInsuranceHomePage -->
+	<screen screenId="marineBoatInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Marine Boat Insurance]]></copy>
+	</screen>
+	<!-- END - marineBoatInsuranceHomePage -->
+	<!-- START - travelLoansHomePage -->
+	<screen screenId="travelLoansHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Travel Loans]]></copy>
+	</screen>
+	<!-- END - travelLoansHomePage -->
+	<!-- START - racvMarineHomePage -->
+	<screen screenId="racvMarineHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Marine]]></copy>
+	</screen>
+	<!-- END - racvMarineHomePage -->
+	<!-- START - racvGolfHomePage -->
+	<screen screenId="racvGolfHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Golf]]></copy>
+	</screen>
+	<!-- END - racvGolfHomePage -->
+	<!-- START - racvGolfMembershipHomePage -->
+	<screen screenId="racvGolfMembershipHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Golf Membership]]></copy>
+	</screen>
+	<!-- END - racvGolfMembershipHomePage -->
+	<!-- START - ourGolfCoursesHomePage -->
+	<screen screenId="ourGolfCoursesHomePage">
+		<copy objectId="pageTitle"><![CDATA[Our Golf Courses]]></copy>
+	</screen>
+	<!-- END - ourGolfCoursesHomePage -->
+	<!-- START - racvGolfClubhouseHomePage -->
+	<screen screenId="racvGolfClubhouseHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Golf Clubhouse]]></copy>
+	</screen>
+	<!-- END - racvGolfClubhouseHomePage -->
+	<!-- START - victorianPGAHomePage -->
+	<screen screenId="victorianPGAHomePage">
+		<copy objectId="pageTitle"><![CDATA[Victorian PGA Championship]]></copy>
+	</screen>
+	<!-- END - victorianPGAHomePage -->
+	<!-- START - pgaEvents2019HomePage -->
+	<screen screenId="pgaEvents2019HomePage">
+		<copy objectId="pageTitle"><![CDATA[PGA events returning to RACV Golf Courses in 2019]]></copy>
+	</screen>
+	<!-- END - pgaEvents2019HomePage -->
+	<!-- START - travelPartnerHomePage -->
+	<screen screenId="travelPartnerHomePage">
+		<copy objectId="pageTitle"><![CDATA[Accommodation and holiday packages]]></copy>
+	</screen>
+	<!-- END - travelPartnerHomePage -->
+	<!-- START - travelMemBenefitsHomePage -->
+	<screen screenId="travelMemBenefitsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Travel Member Benefits]]></copy>
+	</screen>
+	<!-- END - travelMemBenefitsHomePage -->
+	<!-- START - attractionTicketsHomePage -->
+	<screen screenId="attractionTicketsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Attraction tickets]]></copy>
+	</screen>
+	<!-- END - attractionTicketsHomePage -->
+	<!-- START - carHireHomePage -->
+	<screen screenId="carHireHomePage">
+		<copy objectId="pageTitle"><![CDATA[Car Hire]]></copy>
+	</screen>
+	<!-- END - carHireHomePage -->
+	<!-- START - campervanHireHomePage -->
+	<screen screenId="campervanHireHomePage">
+		<copy objectId="pageTitle"><![CDATA[Travel in comfort]]></copy>
+	</screen>
+	<!-- END - campervanHireHomePage -->
+	<!-- START - airportParkTransferHomePage -->
+	<screen screenId="airportParkTransferHomePage">
+		<copy objectId="pageTitle"><![CDATA[Airport parking and transfers]]></copy>
+	</screen>
+	<!-- END - airportParkTransferHomePage -->
+	<!-- START - cruisesToursHomePage -->
+	<screen screenId="cruisesToursHomePage">
+		<copy objectId="pageTitle"><![CDATA[Cruises & Tours]]></copy>
+	</screen>
+	<!-- END - cruisesToursHomePage -->
+	<!-- START - railBusFerryHomePage -->
+	<screen screenId="railBusFerryHomePage">
+		<copy objectId="pageTitle"><![CDATA[Rail, bus and ferry]]></copy>
+	</screen>
+	<!-- END - railBusFerryHomePage -->
+	<!-- START - whatsOnAroundVicHomePage -->
+	<screen screenId="whatsOnAroundVicHomePage">
+		<copy objectId="pageTitle"><![CDATA[What's on around Victoria]]></copy>
+	</screen>
+	<!-- END - whatsOnAroundVicHomePage -->
+	<!-- START - melbourneBikeShareHomePage -->
+	<screen screenId="melbourneBikeShareHomePage">
+		<copy objectId="pageTitle"><![CDATA[Melbourne Bike Share]]></copy>
+	</screen>
+	<!-- END - melbourneBikeShareHomePage -->
+	<!-- START - holidayPlanningHomePage -->
+	<screen screenId="holidayPlanningHomePage">
+		<copy objectId="pageTitle"><![CDATA[Holiday planning]]></copy>
+	</screen>
+	<!-- END - holidayPlanningHomePage -->
+	<!-- START - internationalDrivingLicHomePage -->
+	<screen screenId="internationalDrivingLicHomePage">
+		<copy objectId="pageTitle"><![CDATA[International Driving Permit]]></copy>
+	</screen>
+	<!-- END - internationalDrivingLicHomePage -->
+	<!-- START - travelTipsAdviceHomePage -->
+	<screen screenId="travelTipsAdviceHomePage">
+		<copy objectId="pageTitle"><![CDATA[Travel Tips & Advice]]></copy>
+	</screen>
+	<!-- END - travelTipsAdviceHomePage -->
+	<!-- START - travelLeisureDeskMenuOverlay -->
+	<screen screenId="travelLeisureDeskMenuOverlay">
+		<copy objectId="travelLeisureMenuTitle"><![CDATA[Everything you need to plan your next holiday, from accommodation to dining, travel insurance to discount tickets and more, is available through RACV.]]></copy>
+	</screen>
+	<!-- END - travelLeisureDeskMenuOverlay -->
+	<!-- START - travelAndLeisureHomePage -->
+	<screen screenId="travelAndLeisureHomePage">
+		<copy objectId="pageTitle"><![CDATA[Travel and leisure]]></copy>
+	</screen>
+	<!-- END - travelAndLeisureHomePage -->
+	<!-- START - royalAutoDeskMenuOverlay -->
+	<screen screenId="royalAutoDeskMenuOverlay">
+		<copy objectId="royalAutoMenuTitle"><![CDATA[RoyalAuto: News, reviews, advice and stories to help Victorians get the most out of life, whether at home, on the road or exploring the world.]]></copy>
+	</screen>
+	<!-- END - royalAutoDeskMenuOverlay -->
+	<!-- START - royalAutoHomePage -->
+	<screen screenId="royalAutoHomePage">
+		<copy objectId="pageTitle"><![CDATA[RoyalAuto: News, reviews, advice and stories to help Victorians get the most out of life, whether at home, on the road or exploring the world.]]></copy>
+	</screen>
+	<!-- END - royalAutoHomePage -->
+	<!-- START - publicTransportHomePage -->
+	<screen screenId="publicTransportHomePage">
+		<copy objectId="pageSubTitle"><![CDATA[Public Transport]]></copy>
+	</screen>
+	<!-- END - publicTransportHomePage -->
+	<!-- START - motorcyclingHomePage -->
+	<screen screenId="motorcyclingHomePage">
+		<copy objectId="pageSubTitle"><![CDATA[Motorcycling]]></copy>
+	</screen>
+	<!-- END - motorcyclingHomePage -->
+	<!-- START - cyclingHomePage -->
+	<screen screenId="cyclingHomePage">
+		<copy objectId="pageSubTitle"><![CDATA[Cycling]]></copy>
+		<copy objectId="pageTitle"><![CDATA[Cycling]]></copy>
+	</screen>
+	<!-- END - cyclingHomePage -->
+	<!-- START - travelTipsGuidesHomePage -->
+	<screen screenId="travelTipsGuidesHomePage">
+		<copy objectId="moreTipsAndGuideArticlesButton"><![CDATA[MORE TIPS & GUIDES ARTICLES]]></copy>
+	</screen>
+	<!-- END - travelTipsGuidesHomePage -->
+	<!-- START - theWorldHomePage -->
+	<screen screenId="theWorldHomePage">
+		<copy objectId="moreOverseasArticlesButton"><![CDATA[MORE OVERSEAS ARTICLES]]></copy>
+	</screen>
+	<!-- END - theWorldHomePage -->
+	<!-- START - australiaHomePage -->
+	<screen screenId="australiaHomePage">
+		<copy objectId="moreAustralianArticlesButton"><![CDATA[MORE AUSTRALIAN ARTICLES]]></copy>
+	</screen>
+	<!-- END - australiaHomePage -->
+	<!-- START - victoriaHomePage -->
+	<screen screenId="victoriaHomePage">
+		<copy objectId="moreVictorianArticlesButton"><![CDATA[MORE VICTORIAN ARTICLES]]></copy>
+	</screen>
+	<!-- END - victoriaHomePage -->
+	<!-- START - sustainabilityHomePage -->
+	<screen screenId="sustainabilityHomePage">
+		<copy objectId="vicSustainabilityText"><![CDATA[Victorian Sustainability]]></copy>
+	</screen>
+	<!-- END - sustainabilityHomePage -->
+	<!-- START - peopleInVicHomePage -->
+	<screen screenId="peopleInVicHomePage">
+		<copy objectId="morePeopleArticleButton"><![CDATA[MORE PEOPLE ARTICLES]]></copy>
+	</screen>
+	<!-- END - peopleInVicHomePage -->
+	<!-- START - atHomeHomePage -->
+	<screen screenId="atHomeHomePage">
+		<copy objectId="moreHomeArticlesButton"><![CDATA[MORE HOME ARTICLES]]></copy>
+	</screen>
+	<!-- END - atHomeHomePage -->
+	<!-- START - communityHomePage -->
+	<screen screenId="communityHomePage">
+		<copy objectId="moreCommunityArticlesButton"><![CDATA[MORE COMMUNITY ARTICLES]]></copy>
+	</screen>
+	<!-- END - communityHomePage -->
+	<!-- START - newsInformationHomePage -->
+	<screen screenId="newsInformationHomePage">
+		<copy objectId="moreNewsInfoArticlesButton"><![CDATA[MORE NEWS & INFORMATION ARTICLES]]></copy>
+	</screen>
+	<!-- END - newsInformationHomePage -->
+	<!-- START - competitionsEventsHomePage -->
+	<screen screenId="competitionsEventsHomePage">
+		<copy objectId="pageSubTitle"><![CDATA[Top events this month]]></copy>
+	</screen>
+	<!-- END - competitionsEventsHomePage -->
+	<!-- START - competitionsHomePage -->
+	<screen screenId="competitionsHomePage">
+		<copy objectId="pageSubTitle"><![CDATA[Competitions]]></copy>
+	</screen>
+	<!-- END - competitionsHomePage -->
+	<!-- START - eventsHomePage -->
+	<screen screenId="eventsHomePage">
+		<copy objectId="pageSubTitle"><![CDATA[Event categories]]></copy>
+	</screen>
+	<!-- END - eventsHomePage -->
+	<!-- START - aboutRoyalAutoHomePage -->
+	<screen screenId="aboutRoyalAutoHomePage">
+		<copy objectId="pageTitle"><![CDATA[About RoyalAuto]]></copy>
+	</screen>
+	<!-- END - aboutRoyalAutoHomePage -->
+	<!-- START - subscribeRoyalAutoHomePage -->
+	<screen screenId="subscribeRoyalAutoHomePage">
+		<copy objectId="pageTitle"><![CDATA[Subscribe to RoyalAuto]]></copy>
+	</screen>
+	<!-- END - subscribeRoyalAutoHomePage -->
+	<!-- START - advertiseWithUsHomePage -->
+	<screen screenId="advertiseWithUsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Advertise with RoyalAuto]]></copy>
+	</screen>
+	<!-- END - advertiseWithUsHomePage -->
+	<!-- START - lettersToEditorHomePage -->
+	<screen screenId="lettersToEditorHomePage">
+		<copy objectId="pageTitle"><![CDATA[Letters to the Editor]]></copy>
+	</screen>
+	<!-- END - lettersToEditorHomePage -->
+	<!-- START - royalAutoContactUsHomePage -->
+	<screen screenId="royalAutoContactUsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Contact us at RoyalAuto]]></copy>
+	</screen>
+	<!-- END - royalAutoContactUsHomePage -->
+	<!-- START - membershipDeskMenuOverlay -->
+	<screen screenId="membershipDeskMenuOverlay">
+		<copy objectId="membershipMenuTitle"><![CDATA[As an RACV member, you can now unlock a world of value with savings on everything from tickets to groceries, to car servicing, holidays and much more.]]></copy>
+	</screen>
+	<!-- END - membershipDeskMenuOverlay -->
+	<!-- START - membershipHomePage -->
+	<screen screenId="membershipHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Membership]]></copy>
+	</screen>
+	<!-- END - membershipHomePage -->
+	<!-- START - becomeAMemberHomePage -->
+	<screen screenId="becomeAMemberHomePage">
+		<copy objectId="pageTitle"><![CDATA[Become a member]]></copy>
+	</screen>
+	<!-- END - becomeAMemberHomePage -->
+	<!-- START - manageMyMembershipHomePage -->
+	<screen screenId="manageMyMembershipHomePage">
+		<copy objectId="pageTitle"><![CDATA[Manage my membership]]></copy>
+	</screen>
+	<!-- END - manageMyMembershipHomePage -->
+	<!-- START - registerForMyMembershipHomePage -->
+	<screen screenId="registerForMyMembershipHomePage">
+		<copy objectId="pageTitle"><![CDATA[Register for My Membership Online]]></copy>
+	</screen>
+	<!-- END - registerForMyMembershipHomePage -->
+	<!-- START - retrieveQuoteHomePage -->
+	<screen screenId="retrieveQuoteHomePage">
+		<copy objectId="pageTitle"><![CDATA[Retrieve quote]]></copy>
+	</screen>
+	<!-- END - retrieveQuoteHomePage -->
+	<!-- START - memberBenefitsHomePage -->
+	<screen screenId="memberBenefitsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Membership benefits]]></copy>
+	</screen>
+	<!-- END - memberBenefitsHomePage -->
+	<!-- START - memberDiscountsHomePage -->
+	<screen screenId="memberDiscountsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Member discounts]]></copy>
+	</screen>
+	<!-- END - memberDiscountsHomePage -->
+	<!-- START - yearsOfMembershipBenefitsHomePage -->
+	<screen screenId="yearsOfMembershipBenefitsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Membership benefits]]></copy>
+	</screen>
+	<!-- END - yearsOfMembershipBenefitsHomePage -->
+	<!-- START - expertAdviceHomePage -->
+	<screen screenId="expertAdviceHomePage">
+		<copy objectId="pageTitle"><![CDATA[Expert advice for your life events]]></copy>
+	</screen>
+	<!-- END - expertAdviceHomePage -->
+	<!-- START - memberDiscountInterstateOverseasHomePage -->
+	<screen screenId="memberDiscountInterstateOverseasHomePage">
+		<copy objectId="pageTitle"><![CDATA[Member discounts interstate and overseas]]></copy>
+	</screen>
+	<!-- END - memberDiscountInterstateOverseasHomePage -->
+	<!-- START - racvMemberAppsHomePage -->
+	<screen screenId="racvMemberAppsHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV member apps]]></copy>
+	</screen>
+	<!-- END - racvMemberAppsHomePage -->
+	<!-- START - carsTransportDeskMenuOverlay -->
+	<screen screenId="carsTransportDeskMenuOverlay">
+		<copy objectId="carsTransportMenuTitle"><![CDATA[RACV Mobile Tyres]]></copy>
+	</screen>
+	<!-- END - carsTransportDeskMenuOverlay -->
+	<!-- START - mobileTyresHomePage -->
+	<screen screenId="mobileTyresHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Mobile Tyres]]></copy>
+	</screen>
+	<!-- END - mobileTyresHomePage -->
+	<!-- START - carsTransportHomePage -->
+	<screen screenId="carsTransportHomePage">
+		<copy objectId="pageTitle"><![CDATA[On the road]]></copy>
+	</screen>
+	<!-- END - carsTransportHomePage -->
+	<!-- START - insuranceHomePage -->
+	<screen screenId="insuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Motor Insurance]]></copy>
+	</screen>
+	<!-- END - insuranceHomePage -->
+	<!-- START - carInsuranceHomePage -->
+	<screen screenId="carInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Car Insurance]]></copy>
+	</screen>
+	<!-- END - carInsuranceHomePage -->
+	<!-- START - motorcycleInsuranceHomePage -->
+	<screen screenId="motorcycleInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Motorcycle Insurance]]></copy>
+	</screen>
+	<!-- END - motorcycleInsuranceHomePage -->
+	<!-- START - caravanTrailerInsuranceHomePage -->
+	<screen screenId="caravanTrailerInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Caravan & Trailer Insurance]]></copy>
+	</screen>
+	<!-- END - caravanTrailerInsuranceHomePage -->
+	<!-- START - boatInsuranceHomePage -->
+	<screen screenId="boatInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Marine Boat Insurance]]></copy>
+	</screen>
+	<!-- END - boatInsuranceHomePage -->
+	<!-- START - drivingAndMaintenanceHomePage -->
+	<screen screenId="drivingAndMaintenanceHomePage">
+		<copy objectId="pageTitle"><![CDATA[Driving and maintenance]]></copy>
+	</screen>
+	<!-- END - drivingAndMaintenanceHomePage -->
+	<!-- START - carServicingRepairsHomePage -->
+	<screen screenId="carServicingRepairsHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Accredited Auto Care Centres]]></copy>
+	</screen>
+	<!-- END - carServicingRepairsHomePage -->
+	<!-- START - driveSchoolHomePage -->
+	<screen screenId="driveSchoolHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Drive School]]></copy>
+	</screen>
+	<!-- END - driveSchoolHomePage -->
+	<!-- START - roadSafetyHomePage -->
+	<screen screenId="roadSafetyHomePage">
+		<copy objectId="pageTitle"><![CDATA[Road safety]]></copy>
+	</screen>
+	<!-- END - roadSafetyHomePage -->
+	<!-- START - drivingMaintenanceHomePage -->
+	<screen screenId="drivingMaintenanceHomePage">
+		<copy objectId="pageTitle"><![CDATA[Driving and maintenance tips]]></copy>
+	</screen>
+	<!-- END - drivingMaintenanceHomePage -->
+	<!-- START - airbagSafetyRecallHomePage -->
+	<screen screenId="airbagSafetyRecallHomePage">
+		<copy objectId="pageTitle"><![CDATA[Airbag Safety Recall]]></copy>
+	</screen>
+	<!-- END - airbagSafetyRecallHomePage -->
+	<!-- START - carRunningCostsHomePage -->
+	<screen screenId="carRunningCostsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Car Running costs]]></copy>
+	</screen>
+	<!-- END - carRunningCostsHomePage -->
+	<!-- START - racvBikeAssistHomePage -->
+	<screen screenId="racvBikeAssistHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Bike Assist]]></copy>
+	</screen>
+	<!-- END - racvBikeAssistHomePage -->
+	<!-- START - wheelchairScooterAssistHomePage -->
+	<screen screenId="wheelchairScooterAssistHomePage">
+		<copy objectId="pageTitle"><![CDATA[Emergency Wheelchair and Scooter Assist]]></copy>
+	</screen>
+	<!-- END - wheelchairScooterAssistHomePage -->
+	<!-- START - batteriesPartsHomePage -->
+	<screen screenId="batteriesPartsHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Batteries and Parts]]></copy>
+	</screen>
+	<!-- END - batteriesPartsHomePage -->
+	<!-- START - free2goHomePage -->
+	<screen screenId="free2goHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV free2go]]></copy>
+	</screen>
+	<!-- END - free2goHomePage -->
+	<!-- START - bikeRidingHomePage -->
+	<screen screenId="bikeRidingHomePage">
+		<copy objectId="pageTitle"><![CDATA[Bike riding]]></copy>
+	</screen>
+	<!-- END - bikeRidingHomePage -->
+	<!-- START - carsTransportMotorcyclingHomePage -->
+	<screen screenId="carsTransportMotorcyclingHomePage">
+		<copy objectId="pageTitle"><![CDATA[Motorcycle news and advice]]></copy>
+	</screen>
+	<!-- END - carsTransportMotorcyclingHomePage -->
+	<!-- START - carsTransportCarSharingRentalHomePage -->
+	<screen screenId="carsTransportCarSharingRentalHomePage">
+		<copy objectId="pageTitle"><![CDATA[Car sharing and rental]]></copy>
+	</screen>
+	<!-- END - carsTransportCarSharingRentalHomePage -->
+	<!-- START - carsTransportCarShareHomePage -->
+	<screen screenId="carsTransportCarShareHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Car Share]]></copy>
+	</screen>
+	<!-- END - carsTransportCarShareHomePage -->
+	<!-- START - buyingACarHomePage -->
+	<screen screenId="buyingACarHomePage">
+		<copy objectId="pageTitle"><![CDATA[Buying a car?]]></copy>
+	</screen>
+	<!-- END - buyingACarHomePage -->
+	<!-- START - carLoansHomePage -->
+	<screen screenId="carLoansHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Car Loans]]></copy>
+	</screen>
+	<!-- END - carLoansHomePage -->
+	<!-- START - carReviewsHomePage -->
+	<screen screenId="carReviewsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Car Reviews]]></copy>
+	</screen>
+	<!-- END - carReviewsHomePage -->
+	<!-- START - vehicleInspectionsHomePage -->
+	<screen screenId="vehicleInspectionsHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Vehicle Inspections]]></copy>
+	</screen>
+	<!-- END - vehicleInspectionsHomePage -->
+	<!-- START - carsTransportPublicTransportHomePage -->
+	<screen screenId="carsTransportPublicTransportHomePage">
+		<copy objectId="pageTitle"><![CDATA[Public transport]]></copy>
+	</screen>
+	<!-- END - carsTransportPublicTransportHomePage -->
+	<!-- START - businessSolDeskMenuOverlay -->
+	<screen screenId="businessSolDeskMenuOverlay">
+		<copy objectId="businessSolMenuTitle"><![CDATA[RACV Emergency Home Assist helps businesses deliver exceptional service with a rapid response to their customers' home emergencies.]]></copy>
+	</screen>
+	<!-- END - businessSolDeskMenuOverlay -->
+	<!-- START - emergencyHomeAssistBizHomePage -->
+	<screen screenId="emergencyHomeAssistBizHomePage">
+		<copy objectId="pageTitle"><![CDATA[Emergency Home Assist for Business]]></copy>
+	</screen>
+	<!-- END - emergencyHomeAssistBizHomePage -->
+	<!-- START - businessSolutionsHomePage -->
+	<screen screenId="businessSolutionsHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV business solutions]]></copy>
+	</screen>
+	<!-- END - businessSolutionsHomePage -->
+	<!-- START - professionalIndemnityHomePage -->
+	<screen screenId="professionalIndemnityHomePage">
+		<copy objectId="pageTitle"><![CDATA[Professional Indemnity]]></copy>
+	</screen>
+	<!-- END - professionalIndemnityHomePage -->
+	<!-- START - ictIndemnityHomePage -->
+	<screen screenId="ictIndemnityHomePage">
+		<copy objectId="pageTitle"><![CDATA[ICT Indemnity]]></copy>
+	</screen>
+	<!-- END - ictIndemnityHomePage -->
+	<!-- START - farmInsuranceHomePage -->
+	<screen screenId="farmInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[No fuss farm insurance with the service you expect from RACV]]></copy>
+	</screen>
+	<!-- END - farmInsuranceHomePage -->
+	<!-- START - publicLiabilityInsuranceHomePage -->
+	<screen screenId="publicLiabilityInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV’s no fuss public liability insurance]]></copy>
+	</screen>
+	<!-- END - publicLiabilityInsuranceHomePage -->
+	<!-- START - businessInsuranceTradiesHomePage -->
+	<screen screenId="businessInsuranceTradiesHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV’s got the right business insurance for you, whatever your trade]]></copy>
+	</screen>
+	<!-- END - businessInsuranceTradiesHomePage -->
+	<!-- START - vehiclesHomePage -->
+	<screen screenId="vehiclesHomePage">
+		<copy objectId="pageTitle"><![CDATA[Vehicles]]></copy>
+	</screen>
+	<!-- END - vehiclesHomePage -->
+	<!-- START - bizRoadsideAssistHomePage -->
+	<screen screenId="bizRoadsideAssistHomePage">
+		<copy objectId="pageTitle"><![CDATA[Business Roadside Assistance]]></copy>
+	</screen>
+	<!-- END - bizRoadsideAssistHomePage -->
+	<!-- START - bizSolBizCarLoansHomePage -->
+	<screen screenId="bizSolBizCarLoansHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Business Car Loans]]></copy>
+	</screen>
+	<!-- END - bizSolBizCarLoansHomePage -->
+	<!-- START - bizSolPropertyManagementHomePage -->
+	<screen screenId="bizSolPropertyManagementHomePage">
+		<copy objectId="pageTitle"><![CDATA[Emergency Home Assist Property Management]]></copy>
+	</screen>
+	<!-- END - bizSolPropertyManagementHomePage -->
+	<!-- START - bizSolBuildersDevelopersHomePage -->
+	<screen screenId="bizSolBuildersDevelopersHomePage">
+		<copy objectId="pageTitle"><![CDATA[Emergency Home Assist Builders & Developers]]></copy>
+	</screen>
+	<!-- END - bizSolBuildersDevelopersHomePage -->
+	<!-- START - inYourHomeDeskMenuOverlay -->
+	<screen screenId="inYourHomeDeskMenuOverlay">
+		<copy objectId="inYourHomeMenuTitle"><![CDATA[With Landchecker, researching property has never been easier]]></copy>
+	</screen>
+	<!-- END - inYourHomeDeskMenuOverlay -->
+	<!-- START - landcheckerHomePage -->
+	<screen screenId="landcheckerHomePage">
+		<copy objectId="pageTitle"><![CDATA[Landchecker]]></copy>
+	</screen>
+	<!-- END - landcheckerHomePage -->
+	<!-- START - inYourHomeHomePage -->
+	<screen screenId="inYourHomeHomePage">
+		<copy objectId="pageTitle"><![CDATA[In your home]]></copy>
+	</screen>
+	<!-- END - inYourHomeHomePage -->
+	<!-- START - homeInsuranceHomePage -->
+	<screen screenId="homeInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[Insurance for your home]]></copy>
+	</screen>
+	<!-- END - homeInsuranceHomePage -->
+	<!-- START - racvHomeInsuranceHomePage -->
+	<screen screenId="racvHomeInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Home Insurance]]></copy>
+	</screen>
+	<!-- END - racvHomeInsuranceHomePage -->
+	<!-- START - racvRentersInsuranceHomePage -->
+	<screen screenId="racvRentersInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Renters Insurance]]></copy>
+	</screen>
+	<!-- END - racvRentersInsuranceHomePage -->
+	<!-- START - racvLandlordInsuranceHomePage -->
+	<screen screenId="racvLandlordInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Landlord Insurance]]></copy>
+	</screen>
+	<!-- END - racvLandlordInsuranceHomePage -->
+	<!-- START - racvSingleItemInsuranceHomePage -->
+	<screen screenId="racvSingleItemInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Single Item Insurance]]></copy>
+	</screen>
+	<!-- END - racvSingleItemInsuranceHomePage -->
+	<!-- START - racvPetInsuranceHomePage -->
+	<screen screenId="racvPetInsuranceHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Pet Insurance]]></copy>
+	</screen>
+	<!-- END - racvPetInsuranceHomePage -->
+	<!-- START - homeAdviceHomePage -->
+	<screen screenId="homeAdviceHomePage">
+		<copy objectId="pageTitle"><![CDATA[Home advice]]></copy>
+	</screen>
+	<!-- END - homeAdviceHomePage -->
+	<!-- START - energyCompareHomePage -->
+	<screen screenId="energyCompareHomePage">
+		<copy objectId="pageTitle"><![CDATA[Got your electricity bill handy?]]></copy>
+	</screen>
+	<!-- END - energyCompareHomePage -->
+	<!-- START - racvtinyHomeHomePage -->
+	<screen screenId="racvtinyHomeHomePage">
+		<copy objectId="pageTitle"><![CDATA[Inside the RACV Tiny Home]]></copy>
+		<copy objectId="introText"><![CDATA[Introducing the RACV Tiny Home]]></copy>
+	</screen>
+	<!-- END - racvtinyHomeHomePage -->
+	<!-- START - homeAssistHomePage -->
+	<screen screenId="homeAssistHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Home Assist]]></copy>
+	</screen>
+	<!-- END - homeAssistHomePage -->
+	<!-- START - inYourHomeEmergencyHomeAssistHomePage -->
+	<screen screenId="inYourHomeEmergencyHomeAssistHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Emergency Home Assist]]></copy>
+	</screen>
+	<!-- END - inYourHomeEmergencyHomeAssistHomePage -->
+	<!-- START - inYourHomePersonalLoansHomePage -->
+	<screen screenId="inYourHomePersonalLoansHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Personal Loans]]></copy>
+	</screen>
+	<!-- END - inYourHomePersonalLoansHomePage -->
+	<!-- START - debtConsolidationLoansHomePage -->
+	<screen screenId="debtConsolidationLoansHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Debt Consolidation Loan]]></copy>
+	</screen>
+	<!-- END - debtConsolidationLoansHomePage -->
+	<!-- START - inYourHomeInvestmentsHomePage -->
+	<screen screenId="inYourHomeInvestmentsHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Investments]]></copy>
+	</screen>
+	<!-- END - inYourHomeInvestmentsHomePage -->
+	<!-- START - smartLivingHomePage -->
+	<screen screenId="smartLivingHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Smart Living]]></copy>
+	</screen>
+	<!-- END - smartLivingHomePage -->
+	<!-- START - smartHomeSecurityHomePage -->
+	<screen screenId="smartHomeSecurityHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Smart Home Security]]></copy>
+	</screen>
+	<!-- END - smartHomeSecurityHomePage -->
+	<!-- START - racvSolarHomePage -->
+	<screen screenId="racvSolarHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV Solar]]></copy>
+	</screen>
+	<!-- END - racvSolarHomePage -->
+	<!-- START - smartHomeHomePage -->
+	<screen screenId="smartHomeHomePage">
+		<copy objectId="pageTitle"><![CDATA[Any home can become a smart home]]></copy>
+	</screen>
+	<!-- END - smartHomeHomePage -->
+	<!-- START - memberSurveyHomePage -->
+	<screen screenId="memberSurveyHomePage">
+		<copy objectId="pageTitle"><![CDATA[Become an RACV tester today]]></copy>
+	</screen>
+	<!-- END - memberSurveyHomePage -->
+	<!-- START - carClubsHomePage -->
+	<screen screenId="carClubsHomePage">
+		<copy objectId="pageTitle"><![CDATA[Car clubs]]></copy>
+	</screen>
+	<!-- END - carClubsHomePage -->
+	<!-- START - ourBusinessHomePage -->
+	<screen screenId="ourBusinessHomePage">
+		<copy objectId="pageTitle"><![CDATA[Our business]]></copy>
+	</screen>
+	<!-- END - ourBusinessHomePage -->
+	<!-- START - ourPeopleHomePage -->
+	<screen screenId="ourPeopleHomePage">
+		<copy objectId="pageTitle"><![CDATA[Our people]]></copy>
+	</screen>
+	<!-- END - ourPeopleHomePage -->
+	<!-- START - communityInvolvementHomePage -->
+	<screen screenId="communityInvolvementHomePage">
+		<copy objectId="pageTitle"><![CDATA[RACV in the community]]></copy>
+	</screen>
+	<!-- END - communityInvolvementHomePage -->
+	<!-- START - mediaReleasesHomePage -->
+	<screen screenId="mediaReleasesHomePage">
+		<copy objectId="pageTitle"><![CDATA[Media Releases]]></copy>
+	</screen>
+	<!-- END - mediaReleasesHomePage -->
+	<!-- START - gradRecruitmentHomePage -->
+	<screen screenId="gradRecruitmentHomePage">
+		<copy objectId="pageTitle"><![CDATA[Graduate recruitment]]></copy>
+	</screen>
+	<!-- END - gradRecruitmentHomePage -->
+	<!-- START - eCommOrderSuccessPage -->
+	<screen screenId="eCommOrderSuccessPage">
+		<copy objectId="successMessage"><![CDATA[Your order has been placed]]></copy>
+	</screen>
+	<!-- END - eCommOrderSuccessPage -->
+	<!-- START - resortsContactUsThankUPage -->
+	<screen screenId="resortsContactUsThankUPage">
+		<copy objectId="pageTitle"><![CDATA[Contact RACV Resorts]]></copy>
+	</screen>
+	<!-- END - resortsContactUsThankUPage -->
+	<!-- START - bsgHomePage -->
+	<screen screenId="bsgHomePage">
+		<copy objectId="subscribeThankYou"><![CDATA[Thanks for getting in touch. We'll be in contact with you shortly.]]></copy>
+		<copy objectId="bsgPageHeader"><![CDATA[BOURKE STREET GREEN]]></copy>
+	</screen>
+	<!-- END - bsgHomePage -->
+	<!-- START - applyClubMembershipPage -->
+	<screen screenId="applyClubMembershipPage">
+		<copy objectId="thankyouMessage"><![CDATA[Thank you for your application.]]></copy>
+	</screen>
+	<!-- END - applyClubMembershipPage -->
+	<!-- START - orderBrochurePage -->
+	<screen screenId="orderBrochurePage">
+		<copy objectId="thankYouMessage"><![CDATA[Thank you for ordering a brochure]]></copy>
+	</screen>
+	<!-- END - orderBrochurePage -->
+	<!-- START - PaymentsPage1 -->
+	<screen screenId="PaymentsPage1">
+		<copy objectId="paymentError"><![CDATA[Sorry, there was an error with the payment.]]></copy>
+		<copy objectId="golfPaymentError"><![CDATA[Sorry, the payment was not successful Please try again]]></copy>
+		<copy objectId="golfRenewPaymentError"><![CDATA[Sorry, the payment was not successful Please try again]]></copy>
+	</screen>
+	<!-- END - PaymentsPage1 -->
+	<!-- START - racvClubSearchOverlay -->
+	<screen screenId="racvClubSearchOverlay">
+		<copy objectId="accomodationSearchPageTitle"><![CDATA[Showing results for Accommodation]]></copy>
+		<copy objectId="eventsSearchPageTitle"><![CDATA[Showing results for Events]]></copy>
+		<copy objectId="memberGroupSearchPageTitle"><![CDATA[Showing results for Member groups]]></copy>
+		<copy objectId="diningSearchPageTitle"><![CDATA[Showing results for Dining]]></copy>
+		<copy objectId="carSearchPageTitle"><![CDATA[Showing results for car]]></copy>
+	</screen>
+	<!-- END - racvClubSearchOverlay -->
+	<!-- START - arevoWebPage -->
+	<screen screenId="arevoWebPage">
+		<copy objectId="pageSubHeaderText"><![CDATA[arevo by RACV – Less waiting, more going.]]></copy>
+	</screen>
+	<!-- END - arevoWebPage -->
+	<!-- START - publishedTestComponentPage -->
+	<screen screenId="publishedTestComponentPage">
+		<copy objectId="testButtonLink"><![CDATA[BUTTON-TEST]]></copy>
+	</screen>
+	<!-- END - publishedTestComponentPage -->
+	<!-- START - testHeroComponent1Published -->
+	<screen screenId="testHeroComponent1Published">
+		<copy objectId="subTitleBeforeTitle"><![CDATA[Test-SubTitle]]></copy>
+		<copy objectId="titleAfterSubtitle"><![CDATA[Test-Title]]></copy>
+	</screen>
+	<!-- END - testHeroComponent1Published -->
+	<!-- START - aemBannerCompPage1Published -->
+	<screen screenId="aemBannerCompPage1Published">
+		<copy objectId="blackBannerCTA"><![CDATA[CLICK HERE]]></copy>
+	</screen>
+	<!-- END - aemBannerCompPage1Published -->
+	<!-- START - aemBannerCompPage2Published -->
+	<screen screenId="aemBannerCompPage2Published">
+		<copy objectId="imageBannerCTA"><![CDATA[CLICK HERE]]></copy>
+	</screen>
+	<!-- END - aemBannerCompPage2Published -->
+	<!-- START - aemBannerCompPage3Published -->
+	<screen screenId="aemBannerCompPage3Published">
+		<copy objectId="bannerCTA"><![CDATA[FEATURE BANNER CTA]]></copy>
+	</screen>
+	<!-- END - aemBannerCompPage3Published -->
+	<!-- START - aemBannerCompPage4Published -->
+	<screen screenId="aemBannerCompPage4Published">
+		<copy objectId="bannerCTA"><![CDATA[FEATURE WHITE CTA]]></copy>
+	</screen>
+	<!-- END - aemBannerCompPage4Published -->
+	<!-- START - aemBannerCompPage6Published -->
+	<screen screenId="aemBannerCompPage6Published">
+		<copy objectId="bannerCTA"><![CDATA[5050 BANNER CTA]]></copy>
+	</screen>
+	<!-- END - aemBannerCompPage1Published -->
+	<!-- START - paypalWindow -->
+	<screen screenId="paypalWindow">
+		<copy objectId="amountBeingPaid"><![CDATA[$12.00 AUD]]></copy>
+	</screen>
+	<!-- END - paypalWindow -->
+	<!-- START - aemFooterCompPublishedPage -->
+	<screen screenId="aemFooterCompPublishedPage">
+		<copy objectId="googleLink"><![CDATA[Google]]></copy>
+		<copy objectId="copyrightLabel"><![CDATA[Copyright 2020 RACV]]></copy>
+	</screen>
+	<!-- END - aemFooterCompPublishedPage -->
+	<!-- START - aemClubHeroCompPublishedPage -->
+	<screen screenId="testClubHeroComponentPublished">
+		<copy objectId="title"><![CDATA[Test-Title]]></copy>
+		<copy objectId="description"><![CDATA[Test-Description]]></copy>
+		<copy objectId="quickLinksTitle"><![CDATA[I want to test...]]></copy>
+		<copy objectId="quickLinksLink"><![CDATA[Quick Link Test Title]]></copy>
+	</screen>
+	<!-- END - aemFooterCompPublishedPage -->
+	<!-- START - robotsTxt -->
+	<screen screenId="robotsTxt">
+		<copy objectId="robotsTxt"><![CDATA[User-agent: *
+Disallow: /]]></copy>
+	</screen>
+	<!-- END - robotsTxt -->
+	<!-- START - robotsTxt -->
+	<screen screenId="retailStoreDetails">
+		<copy objectId="nobleParkDetails"><![CDATA[550 Princes Hwy
+Noble Park North VIC 3174
+(Enter Gate 1 from Browns Road)
+Opening hours
+9am – 5pm, Monday – Friday
+Closed weekends and public holidays
+(03) 8558 6500]]></copy>
+		<copy objectId="melbourneDetails"><![CDATA[444 Little Collins St
+Melbourne VIC 3000
+Opening hours
+9am – 5pm, Monday – Friday
+Closed weekends and public holidays
+(03) 9248 0500]]></copy>
+	</screen>
+	<!-- END - robotsTxt -->
+</class>

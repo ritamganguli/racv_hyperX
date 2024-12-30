@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "mvn test"
+  },
+  "devDependencies": {
+    "gherkin-lint": "^4.2.4"
+  }
+}

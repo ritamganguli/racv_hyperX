@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" packages="com.qea.racv.utils">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss} %-5p [%t]: %m%n" />
+		</Console>
+
+		<Routing name="Routing">
+			<Routes pattern="$${thread:threadName}">
+				<Route>
+					<RollingFile name="${thread:threadName}" fileName="src/test/resources/logs/${logDir:logName}/${thread:threadName}.log" filePattern="src/test/resources/logs/${logDir:logName}/${thread:threadName}-%i.log">
+						<PatternLayout pattern="%d{HH:mm:ss} %-5p [%t] %C{10}: %m%n" />
+						<Policies>
+							<OnStartupTriggeringPolicy />
+							<SizeBasedTriggeringPolicy size="10 MB" />
+						</Policies>
+						<DefaultRolloverStrategy max="100" />
+					</RollingFile>
+				</Route>
+			</Routes>
+		</Routing>
+		<Async name="async" bufferSize="1000" includeLocation="true">
+			<AppenderRef ref="Routing" />
+		</Async>
+	</Appenders>
+	<Loggers>
+		<Logger name="io.netty" level="off" additivity="false" />
+		<Logger name="org.asynchttpclient" level="off" additivity="false" />
+		<Logger name="org.testng" level="off" additivity="false" />
+<!--		<logger name="io.github.bonigarcia" level="info" additivity="false" />-->
+		<logger name="org.apache" level="info" />
+<!--    	<logger name="httpclient" level="info" additivity="false"  />-->
+		<!-- <Logger name="com.qea.racv.runner.AppTest" level="off" additivity="false">
+		</Logger>-->
+		<Root level="DEBUG">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="async" />
+		</Root>
+	</Loggers>
+</Configuration>

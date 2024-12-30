@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Default suite" parallel="methods" thread-count="1" data-provider-thread-count="5">
+	<test name="Default test" verbose="1">
+		<parameter name="cucumber.features" value="src/test/resources/features" />
+		<parameter name="cucumber.glue" value="com.qea.racv.tests, com.qea.racv.utils" />
+		<parameter name="cucumber.plugin" value="pretty, summary, html:target/cucumber-reports/cucumber-pretty.html, json:target/cucumber-reports/CucumberTestReport.json" />
+		<parameter name="cucumber.execution.dry-run" value="false" />	
+		<classes>
+			<class name="com.qea.racv.runner.TestNgRunner" />
+		</classes>
+	</test>
+</suite>

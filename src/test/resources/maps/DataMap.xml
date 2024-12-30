@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DataMap.xsd">
+	<data id="clubMemberNumber">
+		<!-- 50% member -->
+		<value environment="prod">7704387</value>
+		<value environment="staging">5741251</value>
+		<value environment="qa">15653905</value> <!-- Not possible for 30% member on SF SIT2 -->
+		<value environment="sandbox">15653905</value> <!-- Not possible for 30% member on SF SIT2 -->
+		<value environment="dev">15653905</value> <!-- Not possible for 30% member on SF SIT2 -->
+		<value environment="hotfix">1196739</value>
+	</data>
+	<data id="clubMemberSurname">
+		<!-- 50% member -->
+		<value environment="prod">Testone</value>
+		<value environment="staging">Test O'test-test</value>
+		<value environment="qa">O'Cannon De-Test</value> <!-- Not possible for 30% member on SF PROD -->
+		<value environment="sandbox">O'Cannon De-Test</value> <!-- Not possible for 30% member on SF PROD -->
+		<value environment="dev">O'Cannon De-Test</value> <!-- Not possible for 30% member on SF PROD -->
+		<value environment="hotfix">Test O'test-test</value>
+	</data>
+		<data id="clubMember30Number">
+		<value environment="prod">7704387</value> <!-- Not possible for 30% member on SF PROD -->
+		<value environment="staging">14849537</value>
+		<value environment="qa">15653905</value>
+		<value environment="sandbox">15653905</value>
+		<value environment="dev">15653905</value>
+		<value environment="hotfix">14849537</value>
+	</data>
+	<data id="clubMember30Surname">
+		<value environment="prod">Testone</value> <!-- Not possible for 30% member on SF PROD -->
+		<value environment="staging">Test O'test-test</value>
+		<value environment="qa">O'Cannon De-Test</value>
+		<value environment="sandbox">O'Cannon De-Test</value>
+		<value environment="dev">O'Cannon De-Test</value>
+		<value environment="hotfix">Test O'test-test</value>
+	</data>
+	<data id="nonClubMemberNumber">
+		<value environment="prod">7545947</value>
+		<value environment="staging">7545947</value>
+		<value environment="qa">15644625</value>
+		<value environment="sandbox">15644625</value>
+		<value environment="dev">15644625</value>
+		<value environment="hotfix">7545947</value>
+	</data>
+	<data id="nonClubMemberSurname">
+		<value environment="prod">test</value>
+		<value environment="staging">Test O'test-test</value>
+		<value environment="qa">O'Cannon De-Test</value>
+		<value environment="sandbox">O'Cannon De-Test</value>
+		<value environment="dev">O'Cannon De-Test</value>
+		<value environment="hotfix">Test O'test-test</value>
+	</data>
+</class>
