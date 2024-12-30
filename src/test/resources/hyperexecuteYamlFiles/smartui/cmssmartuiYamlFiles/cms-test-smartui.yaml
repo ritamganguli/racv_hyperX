@@ -60,6 +60,10 @@ partialReports:
     type: xml
     frameworkName: junit
 
+regionConfig:
+  - region: australiacentral
+    os: win
+
 testDiscovery:
   type: automatic #raw
   mode: static #dynamic
