@@ -12,7 +12,7 @@ generateArtifactAfterEveryStage: true
 #tunnel: true
 
 maxRetries: 1
-concurrency: 30
+concurrency: 50
 runtime:
   language: java
   version: "11"
@@ -21,7 +21,6 @@ env:
   CACHE_DIR: m2_cache_dir
   PROJECT_TOKEN: "164193#ed256932-9334-4fd0-b56c-56d319ef21da#parth_racv_testing"
   LT_SDK_DEBUG: "true"
-  SMARTUI_CLIENT_API_URL: "https://stage-api.lambdatestinternal.com/visualui/1.0"
  
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
