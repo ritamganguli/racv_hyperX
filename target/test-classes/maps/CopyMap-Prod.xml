@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CopyMap.xsd">
+	<!-- START - clubFormPage1 -->
+	<screen screenId="clubFormPage1">
+		<copy objectId="pageTitle">Book Now</copy>
+	</screen>
+	<!-- END - clubFormPage1 -->
+	<!-- START - resortsContactUsThankUPage -->
+	<screen screenId="resortsContactUsThankUPage">
+		<copy objectId="pageTitle">Contact RACV Resorts</copy>
+	</screen>
+	<!-- END - resortsContactUsThankUPage -->
+	<!-- START - resortsPage2 -->
+	<screen screenId="resortsPage2">
+		<copy objectId="searchSuccess">We've found results which match your search criteria. Check them out below!</copy>
+		<copy objectId="bookingUnavailableSearchSuccess">Don&#8217;t miss out on RACV Resort experiences available on other dates. Click here to discover more</copy>
+		<copy objectId="bookingUnavailable">Dates not available -</copy>
+	</screen>
+	<!-- END - resortsPage2 -->
+	<!-- START - roadsideAssistHomePage -->
+	<screen screenId="roadsideAssistHomePage">
+		<copy objectId="pageTitle">RACV Emergency Roadside Assistance</copy>
+		<copy objectId="eraExtraCareProduct"><![CDATA[Extra Care]]></copy>
+		<copy objectId="expandCoverageText"><![CDATA[With Total Care, you can get service in any car you drive, as well as for the nominated vehicle. With Extra Care and Roadside Care, service is only for your nominated vehicle.]]></copy>
+		<copy objectId="expandMetroTowText"><![CDATA[You’ll be towed in your chosen direction up to the relevant kilometre limit. Kilometres travelled beyond that limit aren’t included and you’ll need to cover the payment.]]></copy>
+	</screen>
+	<!-- END - roadsideAssistHomePage -->
+	<!-- START - searchOverlay -->
+	<screen screenId="searchOverlay">
+		<copy objectId="suggestedSearchText">Suggested search</copy>
+	</screen>
+	<!-- END - searchOverlay -->
+	<!-- START - searchResultsPage -->
+	<screen screenId="searchResultsPage">
+		<copy objectId="searchTitleCompetition">Showing results for Competitions</copy>
+		<copy objectId="searchTitleAccommodation">Showing results for Accommodation</copy>
+		<copy objectId="searchTitleBuyingCar">Showing results for Buying a car</copy>
+		<copy objectId="searchTitleCarHire">Showing results for Car hire</copy>
+		<copy objectId="searchTitleInsurance">Showing results for insurance</copy>
+	</screen>
+	<!-- END - searchResultsPage -->
+	<!-- START - bsgHomePage -->
+	<screen screenId="bsgHomePage">
+		<copy objectId="subscribeThankYou"><![CDATA[Thanks for getting in touch. We'll be in contact with you shortly.]]></copy>
+		<copy objectId="bsgPageHeader"><![CDATA[BOURKE STREET GREEN]]></copy>
+	</screen>
+	<!-- END - bsgHomePage -->
+</class>

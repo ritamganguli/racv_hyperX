@@ -11,7 +11,7 @@ captureScreenRecordingForScenarios: false
 codeDirectory: 783626_01JF6PF27AKNQG14NR8C2KG3D7_base_15020355-6ef3-4178-8086-053b0d2a3810
 collectLocalGitData: true
 combineTasksInMatrixMode: false
-concurrency: 30
+concurrency: 50
 cypress: false
 differentialUpload:
     enabled: true
@@ -21,8 +21,7 @@ dynamicAllocation: false
 env:
     CACHE_DIR: m2_cache_dir
     LT_SDK_DEBUG: "true"
-    PROJECT_TOKEN: 164193#ed256932-9334-4fd0-b56c-56d319ef21da#parth_racv_testing
-    SMARTUI_CLIENT_API_URL: https://stage-api.lambdatestinternal.com/visualui/1.0
+    PROJECT_TOKEN: 1136953#b9cb4545-4e94-4acb-9890-89411af19eb7#racv_smartui_abc
 errorCategorizedOnFailureOnly: false
 framework:
     additional_args: null
@@ -77,13 +76,13 @@ framework:
     workingDirectory: ""
 generateArtifactAfterEveryStage: true
 globalTimeout: 150
-jobID: 2b29a90c-90dd-4212-9402-57cca16b1732
+jobID: 6777e417-b0a6-4d81-bfcb-92ab7d28a55c
 jobLabel:
     - smartui
     - selenium
     - win
     - autosplit
-key: zXtiBn48CqKQAGCCB9b49gFBPuGluFgo2VTO0J9U8GRZNkcGmh
+key: dl8Y8as59i1YyGZZUeLF897aCFvIDmaKkUU1e6RgBmlgMLIIhh
 localHTTPProxy: ""
 maxRetries: 1
 maxRetriesPreSteps: 0
@@ -133,10 +132,9 @@ preDirectives:
     shell: ""
     workingDirectory: ""
 project:
-    id: 01JFD42BKNC2MVM43AV9B1PQQS
+    id: 01JFE1FKFRAGZH52TRSB319JHV
     name: cms-test-smartui
     type: default
-projectpath: ""
 regionConfig: []
 report: true
 runson: win
@@ -155,7 +153,7 @@ testDiscovery:
         frameWork: java
         specificTags:
             - '@PublishRegression-p3.chrome.desktop'
-    command: /Users/ritamg/Downloads/783626_01JF6PF27AKNQG14NR8C2KG3D7_base_15020355-6ef3-4178-8086-053b0d2a3810/.hyperexecute/snooper  --targetOs=win --featureFilePaths=src/test/resources/features/ --frameWork=java --specificTags=@PublishRegression-p3.chrome.desktop
+    command: /Users/ritamg/Downloads/783626_01JF6PF27AKNQG14NR8C2KG3D7_base_15020355-6ef3-4178-8086-053b0d2a3810/.hyperexecute/snooper  --targetOs=win --frameWork=java --specificTags=@PublishRegression-p3.chrome.desktop --featureFilePaths=src/test/resources/features/
     mode: static
     type: automatic
 testDiscoveryResult:
@@ -512,6 +510,6 @@ uploadArtefacts:
       name: Junitreports
       path:
         - target/surefire-reports/junitreports/**
-user: rishabhsingh
+user: shubhamr
 version: "0.1"
 waitForArtefactsUpload: false

@@ -1,0 +1,66 @@
+---
+version: 0.1
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 30
+
+runson: win
+
+autosplit: true
+retryOnFailure: false
+generateArtifactAfterEveryStage: true
+#tunnel: true
+
+maxRetries: 1
+concurrency: 15
+runtime:
+  language: java
+  version: "11"
+
+env:
+  CACHE_DIR: m2_cache_dir
+  PROJECT_TOKEN: "783626#91a0c28e-a6e1-49e9-8362-5b07abf87bb3#QA-website-regression-remaining"
+  LT_SDK_DEBUG: "true"
+ 
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - .m2
+
+pre:
+  - mvn -Dmaven.repo.local=./.m2 -Dmaven.test.skip=true clean install
+  #- npm install
+  - npm install -g @lambdatest/smartui-cli@latest @lambdatest/selenium-driver@latest selenium-webdriver@latest
+
+mergeArtifacts: true
+
+project:
+  name: p3-website-regression
+differentialUpload:
+  enabled: true #true/false
+  ttlHours: 360 #int value, with possible range of values [1 hour to 360 hours]
+
+uploadArtefacts:
+- name: Cucumber-Reports
+  path:
+    - target/cucumber-reports/**
+- name: Junitreports
+  path:
+    - target/surefire-reports/junitreports/**
+
+report: true
+partialReports:
+  location: src/test/resources/Reports
+  type: json
+  frameworkName: extent-native
+
+testDiscovery:
+  type: automatic #raw
+  mode: static #dynamic
+  args:
+    featureFilePaths: src/test/resources/features/
+    frameWork: java
+    specificTags: ["@Regression-p3.chrome.desktop and not @Sanity-p3.chrome.desktop"]
+
+testRunnerCommand: $env:HTTPS_PROXY = "http://54.79.106.234:8118" ; npx smartui --config smartui-breakpoints.json exec --buildName $env:JOB_ID -- mvn test `-Dmaven.repo.local=./.m2 dependency:resolve `-Dsurefire.suiteXmlFiles=testng-custom.xml `-Dcucumber.features="$test" ; node fileRename.js
+
+jobLabel: [smartui, qa, p3-website-regression-remaining, selenium, win, autosplit]
